@@ -20,4 +20,4 @@ I'm also inspired by the wonderful [Motherfucking website](http://motherfuckingw
 - The motherfucker's accessible to every asshole that visits your site
 - Shit's legible and gets your fucking point across (if you had one instead of just 5mb pics of hipsters drinking coffee)
 
-All the old posts are backed up too, but I don't expect anyone to read, or miss it. Me included.
+All the old posts are backed up too, but I don't expect anyone to read, or miss them. Me included.
