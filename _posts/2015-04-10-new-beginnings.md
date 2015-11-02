@@ -10,7 +10,7 @@ In a last ditch effort to attempt to be professional about something, I've relau
 
 Originally this was a blog about music, specifically indiepop music, with a focus on gigs. With a bit of photography thrown in. My aims with this relaunch are somewhat more professionally oriented (I work in tech, but more on that later), but there'll probably be plenty of personal stuff on here too.
 
-I've chosen to move the tech stack of the blog to be something far cleaner and more lightweight. I'm no big fan of Wordpress, so I've decided to move to [Jekyll](http://jekyllrb.com/) instead, hosted on the delightful [Github Pages](https://pages.github.com/). This has a number of advantages, but it's mostly just super easy to maintain, is very customisable, and is extremely minimal. This is a personal blog, not a all singing, all dancing corporate website.
+I've chosen to move the tech stack of the blog to be something far cleaner and more lightweight. I'm no big fan of Wordpress, so I've decided to move to [Jekyll](http://jekyllrb.com/) instead, hosted on the delightful [Github Pages](https://pages.github.com/). This has a number of advantages, but it's mostly just super easy to maintain, is very customisable, and is extremely minimal. This is a personal blog, not an all singing, all dancing corporate website.
 
 I'm also inspired by the wonderful [Motherfucking website](http://motherfuckingwebsite.com/):
 

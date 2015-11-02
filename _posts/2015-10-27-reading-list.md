@@ -1,12 +1,13 @@
 ---
 layout: post
 title: "Reading List"
+tagline: "Back in the day, we'd have called this a blogroll"
 date: 2015-10-27 12:19:50
 categories: meta
-featured_image: /images/cover.jpg
+featured_image: /images/books.jpg
 ---
 
-Back in the day, we'd have called this a blogroll. I read a lot. Here are the things I read.
+I read a lot. Here are the things I read.
 
 * [The Economist](http://www.economist.com/)
 
@@ -18,11 +19,11 @@ Most people start reading Private Eye for the cartoons, and then realise they do
 
 * [Ars Technica](http://arstechnica.co.uk/)
 
-The best of the bunch as far as tech websites go. Probably not nearly as developer based as I would like. Their UK site has been championing a very tech liberal agenda at the moment, which I'm quite impressed by.
+The best of the bunch as far as tech websites go. Probably not nearly as developer based as I would like. Their UK site has been championing an anti-survelliance agenda at the moment, which I'm quite impressed by.
 
 * [Rock Paper Shotgun](http://www.rockpapershotgun.com/)
 
-Above all else, the best thing about RPS is that they treat videogames as a medium rather than a weird hobby. I trust their opinion on PC games more than anywhere else. Talk a lot about smaller, independent games. Lots of people give them flak over Gamergate (very unfairly IMO), but I'd wager they probably haven't read half the stuff they actually post.
+Above all else, the best thing about RPS is that they treat videogames as a medium rather than a weird hobby. I trust their opinion on PC games more than anywhere else. Talk a lot about smaller, independent games.
 
 * [GamaSutra](http://www.gamasutra.com/)
 
