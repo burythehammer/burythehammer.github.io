@@ -7,8 +7,6 @@ sitemap:
   priority: 0.6
 ---
 
-{% include tag_cloud.html %}
-
 {% capture tags %}{% for tag in site.tags %}{{ tag[0] }},{% endfor %}{% endcapture %}
 
 {% assign sorted = tags | split: "," | sort %}

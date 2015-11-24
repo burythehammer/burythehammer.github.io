@@ -1,7 +1,7 @@
-name: Severyn Kozak
-url: http://sevko.io
-files_url: http://files.sevko.io
-description: Severyn Kozak's personal portfolio site and blog.
+name: Matt Long
+url: http://www.burythehammer.com
+files_url: http://files.burythehammer.com
+description: Matt Long's homepage
 permalink: /articles/:title
 markdown: kramdown
 lsi: true
