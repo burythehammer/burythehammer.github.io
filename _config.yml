@@ -2,7 +2,7 @@ name: Matt Long
 url: http://www.burythehammer.com
 files_url: http://files.burythehammer.com
 description: Matt Long's homepage
-permalink: /articles/:title
+permalink: /blog/:title
 markdown: kramdown
 lsi: true
 exclude: [

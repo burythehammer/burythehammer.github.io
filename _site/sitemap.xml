@@ -77,7 +77,7 @@
 	
 		
 			<url>
-				<loc>http://www.burythehammer.com/articles/index.html</loc>
+				<loc>http://www.burythehammer.com/blog/index.html</loc>
 				<changefreq>weekly</changefreq>
 				<priority>0.7</priority>
 			 </url>
@@ -85,7 +85,7 @@
 	
 		
 			<url>
-				<loc>http://www.burythehammer.com/articles/tags/index.html</loc>
+				<loc>http://www.burythehammer.com/blog/tags/index.html</loc>
 				<changefreq>weekly</changefreq>
 				<priority>0.6</priority>
 			 </url>
