@@ -10,7 +10,7 @@
 			
 		</description>
 		<link>http://www.burythehammer.com</link>
-		<atom:link href="http://www.burythehammer.com/articles/feed.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="http://www.burythehammer.com/blog/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>Fallout hacking minigame script</title>
@@ -41,8 +41,8 @@
 >
 				</content>
 				<pubDate>Mon, 16 Nov 2015 23:30:50 +0000</pubDate>
-				<link>http://www.burythehammer.com/articles/fallout-password-helper</link>
-				<guid isPermaLink="true">http://www.burythehammer.com/articles/fallout-password-helper</guid>
+				<link>http://www.burythehammer.com/blog/fallout-password-helper</link>
+				<guid isPermaLink="true">http://www.burythehammer.com/blog/fallout-password-helper</guid>
 			</item>
 		
 			<item>
@@ -74,8 +74,8 @@
 >
 				</content>
 				<pubDate>Wed, 11 Nov 2015 18:20:50 +0000</pubDate>
-				<link>http://www.burythehammer.com/articles/testing-with-microservices</link>
-				<guid isPermaLink="true">http://www.burythehammer.com/articles/testing-with-microservices</guid>
+				<link>http://www.burythehammer.com/blog/testing-with-microservices</link>
+				<guid isPermaLink="true">http://www.burythehammer.com/blog/testing-with-microservices</guid>
 			</item>
 		
 			<item>
@@ -143,8 +143,8 @@
 >
 				</content>
 				<pubDate>Tue, 27 Oct 2015 12:19:50 +0000</pubDate>
-				<link>http://www.burythehammer.com/articles/reading-list</link>
-				<guid isPermaLink="true">http://www.burythehammer.com/articles/reading-list</guid>
+				<link>http://www.burythehammer.com/blog/reading-list</link>
+				<guid isPermaLink="true">http://www.burythehammer.com/blog/reading-list</guid>
 			</item>
 		
 			<item>
@@ -182,8 +182,8 @@
 >
 				</content>
 				<pubDate>Mon, 05 Oct 2015 00:09:00 +0100</pubDate>
-				<link>http://www.burythehammer.com/articles/new-beginnings</link>
-				<guid isPermaLink="true">http://www.burythehammer.com/articles/new-beginnings</guid>
+				<link>http://www.burythehammer.com/blog/new-beginnings</link>
+				<guid isPermaLink="true">http://www.burythehammer.com/blog/new-beginnings</guid>
 			</item>
 		
 	</channel>
