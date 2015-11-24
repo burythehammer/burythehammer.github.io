@@ -1,47 +1,46 @@
 ---
 layout: default
+head: |
+  <link rel="stylesheet" href="/css/post.css">
+  <link rel="stylesheet" href="/css/articles.css">
 ---
-<header style="background-image: url({{ site.baseurl }}{{ page.featured_image }});">
-  <div class="container post-container">
-    <a href="{{ site.baseurl }}/" class="home_button"></a>
-    <div class="inner-container">
-      <h1>{{ page.title }}</h1>
-      <ul class="meta">
-        <li>
-          <span>
-            Published
-          </span>
-          {{ page.date | date_to_string }}
-        </li>
-        <li>
-          <span>
-            Category
-          </span>
-          {{ page.categories }}
-        </li>
-      </ul>      
-    </div>
-    <ul class="pagination">
-      {% if page.previous.url %}
-        <li class="previous">
-          <a href="{{ site.baseurl }}{{ page.previous.url }}">
-            Previous
-          </a>
-        </li>
-      {% endif %}
-      {% if page.next.url %}
-      <li class="next">
-        <a href="{{ site.baseurl }}{{ page.next.url }}">
-          Next
-        </a>
-      </li>
-      {% endif %}
-    </ul>
-  </div>
-</header>
 
-<article>
-  <div class="container">
-    {{ content }}
-  </div>
-</article>
+<div id="meta">
+	<h1>{{ page.title }}</h1>
+	<span>{{ page.date | date_to_string }}</span>
+	<div id="tags">
+		<span>tags:</span>
+		{% for tag in page.tags %}
+			{% unless forloop.last %}
+				<a href="/articles/tags#{{ tag }}">{{ tag }}</a>,
+			{% endunless %}
+		{% endfor %}
+		<a href="/articles/tags#{{ page.tags[-1] }}">{{ page.tags[-1] }}</a>
+	</div>
+</div>
+
+<div id="post">
+	{% if page.math %}
+		<noscript>
+			<p id="mathjax-warning">
+				<b>Warning:</b> This post contains math blocks rendered with the <a href="http://www.mathjax.org/">MathJax</a>
+				JavaScript library. If you don't enable JavaScript in your browser, none of them will display.
+			</p>
+		</noscript>
+	{% endif %}
+	{% if page.toc %}
+		{{ content | toc_generate }}
+	{% else %}
+		{{ content }}
+	{% endif %}
+</div>
+
+<section id="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript" src="http://sevko.disqus.com/embed.js"></script>
+	<noscript><b id="comments-noscript">Enable JavaScript to see comments.</b></noscript>
+</section>
+
+{% if page.toc %}
+	{% include smooth_scroll.html %}
+{% endif %}

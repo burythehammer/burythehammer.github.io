@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>
+			emulating exceptions in C
+		</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="A practical use-case for emulating exceptions in C with longjmp()/setjmp().">
+		<meta name="viewport" content="initial-scale=1">
+
+		<style>
+			div#header li#emulating exceptions in C a {
+				color: #3873b3;
+				font-weight: bold;
+			}
+		</style>
+
+		<link rel=”author” href="https://plus.google.com/109642458345919934865/">
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+
+		<!-- Page-specific stylesheets.  -->
+		
+		
+			<link rel="stylesheet" type="text/css" href="/css/header.css">
+		
+		
+			<link rel="stylesheet" type="text/css" href="/css/code_color_scheme.css">
+			<link rel="stylesheet" type="text/css" href="/css/code.css">
+		
+
+		<!-- MathJax configuration. -->
+		
+
+		<link rel="stylesheet" href="/css/post.css">
+<link rel="stylesheet" href="/css/articles.css">
+
+
+		<!-- Bill. -->
+		<script>
+			console.log("_   /|\n\\'o.O'\n=(___)=\n   U\n\nHey there.");
+		</script>
+
+		<!-- Google Analytics. -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-30847723-5', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+			<p>
+				You are using an <strong>outdated</strong> browser. Please
+				<a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+			</p>
+		<![endif]-->
+
+		<div id="main">
+			
+				<div id="header">
+	<h2>λ</h2>
+	<ul>
+		<li id="home"><a href="/">home</a></li
+		><li id="about"><a href="/about">about</a></li
+		><li id="projects"><a href="/projects">projects</a></li
+		><li id="articles"><a href="/articles">articles</a></li
+		><li id="resume"><a href="/resume.pdf">resume</a></li
+		><li id="contact"><a href="mailto:matt@burythehammer.com">contact</a></li
+	></ul>
+</div>
+
+			
+			<div id="meta">
+	<h1>emulating exceptions in C</h1>
+	<span>22 Aug 2015</span>
+	<div id="tags">
+		<span>tags:</span>
+		
+			
+				<a href="/articles/tags#c">c</a>,
+			
+		
+			
+				<a href="/articles/tags#parsing">parsing</a>,
+			
+		
+			
+		
+		<a href="/articles/tags#algorithms">algorithms</a>
+	</div>
+</div>
+
+<div id="post">
+	
+	
+		<div id="toc-container"><table class="toc" id="toc"><tbody><tr><td>
+<div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toc_level-1 toc_section-1">
+<a data-scroll href="#tocAnchor-1-1"><span class="tocnumber">1</span> <span class="toctext">case study: a recursive-descent parser</span></a><ul><li class="toc_level-2 toc_section-2"><a data-scroll href="#tocAnchor-1-1-1"><span class="tocnumber">1.1</span> <span class="toctext">recursive-descent parsing</span></a></li></ul>
+</li>
+<li class="toc_level-1 toc_section-3">
+<a data-scroll href="#tocAnchor-1-3"><span class="tocnumber">2</span> <span class="toctext">error-handling</span></a><ul>
+<li class="toc_level-2 toc_section-4"><a data-scroll href="#tocAnchor-1-3-1"><span class="tocnumber">2.1</span> <span class="toctext">error codes</span></a></li>
+<li class="toc_level-2 toc_section-5"><a data-scroll href="#tocAnchor-1-3-2"><span class="tocnumber">2.2</span> <span class="toctext">exceptions, exceptions</span></a></li>
+</ul>
+</li>
+<li class="toc_level-1 toc_section-6"><a data-scroll href="#tocAnchor-1-6"><span class="tocnumber">3</span> <span class="toctext">in conclusion</span></a></li>
+</ul>
+</td></tr></tbody></table></div>
+<a data-scroll="" href="#toc-container"><h1 id="tocAnchor-1-1">case study: a recursive-descent parser</h1></a>
+<p>I recently stumbled across a practical use-case for simulated exceptions in C while writing a recursive-descent JSON
+parser for fun and profit. In this quick write-up, I’ll give a high-level overview of the problems that I ran into, why
+exceptions were ideal for error handling, and how I emulated them in C.</p>
+
+<a data-scroll="" href="#toc-container"><h2 id="tocAnchor-1-1-1">recursive-descent parsing</h2></a>
+<p>I won’t dwell on the details of the parser itself because this post is about the error-handling mechanism, but a
+minimal understanding of recursive-descent parsing is necessary to appreciate it. As with any kind of parsing, we start
+out with the <a href="https://en.wikipedia.org/wiki/Formal_grammar">formal grammar</a> of our language/data format/whatever. A
+simple grammar for common programming language literals might look like:</p>
+
+<div class="highlight"><pre><code class="language-ruby block" data-lang="ruby"><span class="ss">value</span><span class="p">:</span> <span class="n">string</span> <span class="o">|</span> <span class="n">number</span> <span class="o">|</span> <span class="n">boolean</span>
+<span class="ss">string</span><span class="p">:</span> <span class="s1">'"'</span> <span class="n">char</span><span class="o">*</span> <span class="s1">'"'</span>
+<span class="ss">boolean</span><span class="p">:</span> <span class="s1">'true'</span> <span class="o">|</span> <span class="s1">'false'</span>
+<span class="ss">number</span><span class="p">:</span> <span class="s1">'-'</span><span class="p">?</span> <span class="n">digit</span><span class="o">+</span> <span class="p">(</span><span class="s1">'.'</span> <span class="n">digit</span><span class="o">+</span><span class="p">)?</span>
+<span class="ss">array</span><span class="p">:</span> <span class="s1">'['</span> <span class="n">value</span> <span class="s1">']'</span></code></pre></div>
+
+<p>In fact, the <a href="http://json.org/">JSON grammar</a> that I used is fairly similar. Writing a <a href="https://en.wikipedia.org/wiki/Recursive_descent_parser">recursive-descent
+parser</a> for a grammar like the above is straightforward,
+because you simply map each rule onto a corresponding parse function. In pseudocode, we might have:</p>
+
+<div class="highlight"><pre><code class="language-python block" data-lang="python"><span class="n">parse</span><span class="p">()</span>
+    <span class="c"># perform setup</span>
+    <span class="k">return</span> <span class="n">parseValue</span><span class="p">()</span>
+
+<span class="n">parseValue</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">nextIsString</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">parseString</span><span class="p">()</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="n">nextIsNumber</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">parseNumber</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="n">nextIsBoolean</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">parseBoolean</span><span class="p">()</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="n">nextIsArray</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">parseArray</span><span class="p">()</span>
+    <span class="k">else</span>
+        <span class="n">throw</span> <span class="n">ParseError</span><span class="p">()</span>
+
+<span class="n">parseString</span><span class="p">()</span>
+    <span class="n">matchChars</span><span class="p">(</span><span class="s">'"'</span><span class="p">)</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="n">readCharsUntil</span><span class="p">(</span><span class="s">'"'</span><span class="p">)</span>
+    <span class="n">matchChars</span><span class="p">(</span><span class="s">'"'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">string</span>
+
+<span class="n">parseBoolean</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">peekChar</span><span class="p">()</span> <span class="o">==</span> <span class="s">'t'</span>
+        <span class="n">matchChars</span><span class="p">(</span><span class="s">'true'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">true</span>
+    <span class="k">else</span>
+        <span class="n">matchChars</span><span class="p">(</span><span class="s">'false'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">false</span>
+
+<span class="c"># and so on</span></code></pre></div>
+
+<p>The gist is that we have a bunch of mutually recursive parsing routines that ultimately rely on very primitive,
+low-level functions (like <code class="inline">nextChar()</code>, <code class="inline">readCharsUntil()</code>, <code class="inline">matchChars()</code>, etc. in the above example) that operate
+directly on the string being parsed.</p>
+
+<a data-scroll="" href="#toc-container"><h1 id="tocAnchor-1-3">error-handling</h1></a>
+<p>Most of the errors that we need to worry about will occur in those primitives: <code class="inline">nextChar()</code> might fail
+to read a character because it hit the end of the input stream and <code class="inline">matchChars()</code> might find an unexpected character,
+for example. We may also want to manually signal an error in one of our high-level parsing routines, like we do in
+<code class="inline">parseValue()</code> when we can’t detect any valid values ahead. The key observations to make are that in a recursive-descent
+parser, the call stack will grow quite deep, and that errors are fatal; in other words, when one occurs, we need to
+<code class="inline">return</code> through many layers of function calls until we hit the <code class="inline">parse()</code> that started it all:</p>
+
+<div class="highlight"><pre><code class="language-python block" data-lang="python"><span class="n">getNextChar</span><span class="p">()</span>   <span class="c"># Error, hit EOF!</span>
+<span class="n">matchChars</span><span class="p">()</span>
+<span class="n">parseBoolean</span><span class="p">()</span>
+<span class="n">parseValue</span><span class="p">()</span>
+<span class="n">parseArray</span><span class="p">()</span>
+<span class="n">parseValue</span><span class="p">()</span>
+<span class="n">parse</span><span class="p">()</span>         <span class="c"># The top-level parse routine that we need to jump back to.</span></code></pre></div>
+
+<p>How should we
+handle errors in C, then?</p>
+
+<a data-scroll="" href="#toc-container"><h2 id="tocAnchor-1-3-1">error codes</h2></a>
+<p>The idiomatic solution is to simply use error codes. If <code class="inline">nextChar()</code> fails, return <code class="inline">-1</code> (which is suitable because
+character values can’t be negative), and make sure to actually <em>check</em> that return value every time you call it.</p>
+
+<div class="highlight"><pre><code class="language-c block" data-lang="c"><span class="kt">char</span> <span class="n">chr</span> <span class="o">=</span> <span class="n">nextChar</span><span class="p">(</span><span class="n">parserState</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="n">chr</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Note that the <code class="inline">parserState</code> argument passed to <code class="inline">nextChar()</code> is a (pointer to a) <code class="inline">struct</code> containing the parser’s state:
+a pointer to the string being parsed, its length, the current index in that string, etc.</p>
+
+<p>In practice, we’d probably settle for a more sophisticated solution that involves storing error information inside
+<code class="inline">parserState</code>, like a boolean indicating whether a failure occurred and an error message to accompany it, since it’s
+more flexible:</p>
+
+<div class="highlight"><pre><code class="language-c block" data-lang="c"><span class="kt">char</span> <span class="n">chr</span> <span class="o">=</span> <span class="n">nextChar</span><span class="p">(</span><span class="n">parserState</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="n">parserState</span><span class="o">-&gt;</span><span class="n">failed</span><span class="p">){</span>
+    <span class="n">puts</span><span class="p">(</span><span class="n">parserState</span><span class="o">-&gt;</span><span class="n">errMsg</span><span class="p">);</span> <span class="c1">// just an example</span>
+    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Either way, the result is that we have to remember to manually check some error value after every call to a parse
+routine that carried the possibility of failure. It bloats your code with repetitive conditionals and prevents you from
+using the return value of a parse routine directly in an expression because, again, you need an explicit conditional.
+Can we do better?</p>
+
+<a data-scroll="" href="#toc-container"><h2 id="tocAnchor-1-3-2">exceptions, exceptions</h2></a>
+<p>An exception mechanism would be ideal here, since we want to jump back to an arbitrary point in the call stack (in
+our case, <code class="inline">parse()</code>) from any one function. While C doesn’t provide us with real exceptions, we <em>can</em> simulate
+them…</p>
+
+<h3 id="longjmp-setjmp">
+<code class="inline">longjmp()</code>, <code class="inline">setjmp()</code>
+</h3>
+<p>Enter <code class="inline">longjmp()</code> and <code class="inline">setjmp()</code>; like <code class="inline">goto</code>, but nuclear! From the manpage, these functions facilitate
+“nonlocal jumps to a saved stack context,” or, in other words, allow you to perform jumps across functions. <strong>Use with
+extreme caution.</strong> The gist is that <code class="inline">setjmp()</code> is used to initialize a <code class="inline">jmp_buf</code>, storing critical information about
+the current calling environment – it’s highly system-specific, but generally includes things like the stack pointer
+and current register values – and returns 0 (the <strong>first</strong> time it returns – this will be explained shortly). You can
+then pass that <code class="inline">jmp_buf</code> to <code class="inline">longjmp()</code> at any other point, and the program will rewind execution back to the
+<code class="inline">setjmp()</code> call. You’ll also need to pass a non-zero <code class="inline">int</code> to <code class="inline">longjmp()</code>, which will be the value that <code class="inline">setjmp()</code>
+returns this time around; this allows us to discriminate between the times that <code class="inline">setjmp()</code> returns a.) initially and
+b.) after a jump was performed. An example should set things straight:</p>
+
+<div class="highlight"><pre><code class="language-c block" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="cp">#include &lt;setjmp.h&gt;</span>
+
+<span class="kt">void</span> <span class="nf">bar</span><span class="p">(</span><span class="kt">jmp_buf</span> <span class="n">jmpBuf</span><span class="p">){</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">"inside bar()"</span><span class="p">);</span>
+    <span class="n">longjmp</span><span class="p">(</span><span class="n">jmpBuf</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">"this should never run!"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+    <span class="kt">jmp_buf</span> <span class="n">jmpBuf</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">setjmp</span><span class="p">(</span><span class="n">jmpBuf</span><span class="p">)){</span>
+        <span class="c1">// This runs after `setjmp()` returns normally.</span>
+        <span class="n">puts</span><span class="p">(</span><span class="s">"calling bar()"</span><span class="p">);</span>
+        <span class="n">bar</span><span class="p">(</span><span class="n">jmpBuf</span><span class="p">);</span>
+        <span class="n">puts</span><span class="p">(</span><span class="s">"this should never run!"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// This runs after `setjmp()` returns from a `longjmp()`.</span>
+        <span class="n">puts</span><span class="p">(</span><span class="s">"returned from bar()"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="n">foo</span><span class="p">();</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>When compiled and run, you should see:</p>
+
+<div class="highlight"><pre><code class="language-c block" data-lang="c"><span class="n">calling</span> <span class="n">bar</span><span class="p">()</span>
+<span class="n">inside</span> <span class="n">bar</span><span class="p">()</span>
+<span class="n">returned</span> <span class="n">from</span> <span class="n">bar</span><span class="p">()</span></code></pre></div>
+
+<p>Notice how we wrap the call to <code class="inline">setjmp()</code> in a conditional, which allows us to selectively run different code after it
+returned regularly (returning 0) and then after a jump occurred (returning whatever argument was passed to <code class="inline">longjmp()</code>,
+or, in our case, 1). Continuing the exceptions analogy, this is similar to a <code class="inline">try {} catch {}</code>.</p>
+
+<p>Also, note that <code class="inline">jmp_buf</code> is <code class="inline">typedef</code>‘d as an array of the <em>actual</em> <code class="inline">jmp_buf</code> structs <strong>with only one element</strong> – in
+other words, when you declare <code class="inline">jmp_buf jmpBuf;</code>, the  struct inside <code class="inline">jmpBuf</code> lives entirely on the stack but <code class="inline">jmpBuf</code>
+will decay to a pointer if you pass it to a function. In my opinion that’s rather misleading and I would’ve preferred
+to manually, explicitly use pointer notation when necessary, but it is what it is.</p>
+
+<h3 id="integrating-them-into-the-parser">integrating them into the parser</h3>
+<p>The idea is to initialize a <code class="inline">jmp_buf</code> in the <code class="inline">parse()</code> function with <code class="inline">setjmp()</code>, store it inside the <code class="inline">parserState</code>
+struct in a <code class="inline">prevErrorTrap</code> member (couldn’t think of a better name), and then <code class="inline">longjmp()</code> to it whenever an error
+occurs. If that were all, using this solution would be a no-brainer, but alas, there’s a complication: some of our
+parsing routines might need to perform cleanup before exiting, like <code class="inline">free()</code>ing temporarily allocated memory. For
+instance, the <code class="inline">parseArray()</code> function in my parser allocates a stretchy array to house all of the values that it
+successfully parses; if an error occurs in one of the <code class="inline">parseValue()</code> calls that it makes, it needs to deallocate all of
+the values parsed thus far and then the array itself.  If we jump from the point where the error occurred to the very
+beginning of the parse, though, we don’t have any means of doing so.</p>
+
+<h3 id="intermediate-cleanup">intermediate cleanup</h3>
+<p>Two solutions come to mind:</p>
+
+<ul>
+  <li>storing pointers to all of the blocks of memory allocated by the parse routines inside an array in <code class="inline">parserState</code>,
+and then <code class="inline">free()</code>ing them inside the top-level <code class="inline">parse()</code> if an error occurred</li>
+  <li>setting intermediate jump points in functions that need to perform cleanup; in effect, catching exceptions,
+cleaning up, and reraising them.</li>
+</ul>
+
+<p>I ultimately settled for the latter, and the idea’s the same as before: in functions like <code class="inline">parseArray()</code> and any
+others that allocate intermediate memory, create a copy of the current jump buffer (<code class="inline">parserState-&gt;prevErrorTrap</code>),
+and then set <code class="inline">parserState-&gt;prevErrorTrap</code> to a <strong>new</strong> jump buffer created with <code class="inline">setjmp()</code> – this one will get used
+by all of the parse routines called by the current one. If the parse succeeds, just restore
+<code class="inline">parserState-&gt;prevErrorTrap</code> to the original jump buffer before returning. If it fails, perform cleanup and jump
+directly to the original buffer. Here’s an example taken straight from the parser’s source, with irrelevant bits
+omitted:</p>
+
+<div class="highlight"><pre><code class="language-c block" data-lang="c"><span class="k">static</span> <span class="n">JsonArray_t</span> <span class="nf">JsonParser_parseArray</span><span class="p">(</span><span class="n">JsonParser_t</span> <span class="o">*</span><span class="n">state</span><span class="p">){</span>
+    <span class="cm">/**</span>
+<span class="cm">     * Omitted: perform setup here.</span>
+<span class="cm">     */</span>
+
+    <span class="kt">jmp_buf</span> <span class="n">prevErrorTrap</span><span class="p">;</span>
+    <span class="n">copyJmpBuf</span><span class="p">(</span><span class="n">prevErrorTrap</span><span class="p">,</span> <span class="n">state</span><span class="o">-&gt;</span><span class="n">errorTrap</span><span class="p">);</span>
+
+    <span class="c1">// The stretchy array used to store parsed values. Read on</span>
+    <span class="c1">// for why `volatile` is necessary.</span>
+    <span class="n">JsonVal_t</span> <span class="o">*</span><span class="k">volatile</span> <span class="n">values</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">setjmp</span><span class="p">(</span><span class="n">state</span><span class="o">-&gt;</span><span class="n">errorTrap</span><span class="p">)){</span>
+
+        <span class="cm">/**</span>
+<span class="cm">         * Omitted: parse values into `values` with repeated calls</span>
+<span class="cm">         * to `parseValue()`.</span>
+<span class="cm">         */</span>
+
+        <span class="c1">// If we get this far, then no error occurred, so restore the</span>
+        <span class="c1">// original `prevErrorTrap`.</span>
+        <span class="n">copyJmpBuf</span><span class="p">(</span><span class="n">state</span><span class="o">-&gt;</span><span class="n">errorTrap</span><span class="p">,</span> <span class="n">prevErrorTrap</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="n">JsonArray_t</span><span class="p">){</span>
+            <span class="p">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">sb_count</span><span class="p">(</span><span class="n">values</span><span class="p">),</span>
+            <span class="p">.</span><span class="n">values</span> <span class="o">=</span> <span class="n">values</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// An error occurred! Deallocate all intermediate memory,</span>
+        <span class="c1">// and then jump to the previous `prevErrorTrap`.</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">ind</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ind</span> <span class="o">&lt;</span> <span class="n">sb_count</span><span class="p">(</span><span class="n">values</span><span class="p">);</span> <span class="n">ind</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">JsonVal_free</span><span class="p">(</span><span class="o">&amp;</span><span class="n">values</span><span class="p">[</span><span class="n">ind</span><span class="p">]);</span>
+        <span class="p">}</span>
+        <span class="n">sb_free</span><span class="p">(</span><span class="n">values</span><span class="p">);</span>
+        <span class="n">longjmp</span><span class="p">(</span><span class="n">prevErrorTrap</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p><code class="inline">copyJmpBuf()</code> is just a convenience wrapper for <code class="inline">memcpy()</code>:</p>
+
+<div class="highlight"><pre><code class="language-c block" data-lang="c"><span class="k">static</span> <span class="kt">void</span> <span class="o">*</span><span class="nf">copyJmpBuf</span><span class="p">(</span><span class="kt">jmp_buf</span> <span class="n">dest</span><span class="p">,</span> <span class="k">const</span> <span class="kt">jmp_buf</span> <span class="n">src</span><span class="p">){</span>
+    <span class="k">return</span> <span class="n">memcpy</span><span class="p">(</span><span class="n">dest</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">jmp_buf</span><span class="p">));</span>
+<span class="p">}</span></code></pre></div>
+
+<p>One other thing to note is that we declared the <code class="inline">values</code> pointer as <code class="inline">volatile</code> to prevent the compiler from placing it
+into a register. Why? The problem is that we modify <code class="inline">values</code> after the call to <code class="inline">setjmp()</code>, namely when we
+perform the initial allocation of a stretchy array and then whenever it gets resized and a <code class="inline">realloc()</code> changes the
+location of the items that it contains. When a long jump occurs, register values are restored from whatever they were at the
+time of the <code class="inline">setjmp()</code> call, since those are what it copied into the target <code class="inline">jmp_buf</code>; if the compiler decided to put
+<code class="inline">values</code> into a register, then after the jump, it would be set to <code class="inline">NULL</code>.
+To prevent that from happening, we use the <code class="inline">volatile</code> specifier. See <a href="http://stackoverflow.com/questions/7996825/why-volatile-works-for-setjmp-longjmp">this SO
+post</a> for more; this is an example of
+the potentially very dangerous subtleties of long jumping. In fact, while writing my parser I forgot to add in the
+<code class="inline">volatile</code> specifier to <code class="inline">values</code>, and noticed that it was leaking memory (thank you <a href="http://valgrind.org/">valgrind</a>!)
+whenever an error occurred even though the cleanup clause <em>was</em> getting run. It turns out that <code class="inline">values</code> would get put
+into a register and then consequently take on a value of <code class="inline">NULL</code> after the jump – since that’s what it was at the time
+of the original <code class="inline">setjmp()</code> – meaning that the only reference to the allocated memory was lost and it couldn’t possibly
+be deallocated. Moreover, when passed to <code class="inline">free()</code>, it wouldn’t blow up, because <code class="inline">free()</code> ignores NULL pointers<sup id="fnref:1"><a href="#fn:1" class="footnote" data-scroll="">1</a></sup>!</p>
+
+<p>To wrap up the above example, all of the other parsing functions that set intermediate breakpoints have virtually the same
+layout, so you could even theoretically encapsulate the different statements in macros like <code class="inline">try</code> and <code class="inline">catch</code> for a
+full blown mimicry of exceptions in other languages – that’s too much magic for me, though.</p>
+
+<a data-scroll="" href="#toc-container"><h1 id="tocAnchor-1-6">in conclusion</h1></a>
+<p><code class="inline">longjmp()</code> and <code class="inline">setjmp()</code> are tricky. They’re obscure, can give rise to subtle bugs, are highly platform-specific,
+and, if abused, will probably lead to awfully confusing code; a footcannon if I ever saw one. That being said, like
+<code class="inline">goto</code>, they <em>do</em> have valid uses and can be very powerful when used appropriately. In this case, I think they were
+superior to error codes and resulted in a slimmer, more readable implementation than what it otherwise would’ve been.
+If you’re interested in more reading, I recommend <a href="http://www.di.unipi.it/~nids/docs/longjump_try_trow_catch.html">this comprehensive
+article</a>. Also,
+<a href="http://files.sevko.io/exceptions_in_c/json_parser_c.zip">here</a>’s the thoroughly documented parser source code; check out <code class="inline">src/json_parser.c</code>.</p>
+
+<hr>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>From <code class="inline">man -s3 free</code>: “If ptr is NULL, no operation is performed” <a href="#fnref:1" class="reversefootnote" data-scroll="">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+	
+</div>
+
+<section id="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript" src="http://sevko.disqus.com/embed.js"></script>
+	<noscript><b id="comments-noscript">Enable JavaScript to see comments.</b></noscript>
+</section>
+
+
+	<script src="/js/smooth-scroll/dist/js/bind-polyfill.min.js"></script>
+<script src="/js/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+<script>
+	smoothScroll.init({offset: 30});
+</script>
+
+
+
+		</div>
+
+	</body>
+</html>

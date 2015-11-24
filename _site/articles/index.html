@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>
+			articles
+		</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="Severyn Kozak's software-development and computer-science articles.">
+		<meta name="viewport" content="initial-scale=1">
+
+		<style>
+			div#header li#articles a {
+				color: #3873b3;
+				font-weight: bold;
+			}
+		</style>
+
+		<link rel=”author” href="https://plus.google.com/109642458345919934865/">
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+
+		<!-- Page-specific stylesheets.  -->
+		
+			<link rel="stylesheet" type="text/css" href="/css/articles.css">
+		
+		
+			<link rel="stylesheet" type="text/css" href="/css/header.css">
+		
+		
+
+		<!-- MathJax configuration. -->
+		
+
+		<link
+  rel="alternate"
+  type="application/rss+xml"
+  title="Severyn Kozak"
+  href="http://sevko.io/feed.xml">
+
+
+		<!-- Bill. -->
+		<script>
+			console.log("_   /|\n\\'o.O'\n=(___)=\n   U\n\nHey there.");
+		</script>
+
+		<!-- Google Analytics. -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-30847723-5', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+			<p>
+				You are using an <strong>outdated</strong> browser. Please
+				<a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+			</p>
+		<![endif]-->
+
+		<div id="main">
+			
+				<div id="header">
+	<h2>λ</h2>
+	<ul>
+		<li id="home"><a href="/">home</a></li
+		><li id="about"><a href="/about">about</a></li
+		><li id="projects"><a href="/projects">projects</a></li
+		><li id="articles"><a href="/articles">articles</a></li
+		><li id="resume"><a href="/resume.pdf">resume</a></li
+		><li id="contact"><a href="mailto:matt@burythehammer.com">contact</a></li
+	></ul>
+</div>
+
+			
+			<a href="/articles/feed.xml">[RSS]</a>
+
+<div id="cloud">
+	<span>
+		<a href="/articles/tags/"><h3>tags</h3></a>
+	</span>
+<a data-scroll style='font-size: 140%' href='/articles/tags#prime numbers'>prime numbers</a>
+<a data-scroll style='font-size: 90%' href='/articles/tags#computer engineering'>computer engineering</a>
+<a data-scroll style='font-size: 90%' href='/articles/tags#javascript'>javascript</a>
+<a data-scroll style='font-size: 90%' href='/articles/tags#c'>c</a>
+<a data-scroll style='font-size: 90%' href='/articles/tags#sets'>sets</a>
+<a data-scroll style='font-size: 90%' href='/articles/tags#visualizations'>visualizations</a>
+<a data-scroll style='font-size: 90%' href='/articles/tags#book review'>book review</a>
+<a data-scroll style='font-size: 170%' href='/articles/tags#algorithms'>algorithms</a>
+<a data-scroll style='font-size: 170%' href='/articles/tags#math'>math</a>
+<a data-scroll style='font-size: 140%' href='/articles/tags#python'>python</a>
+<a data-scroll style='font-size: 90%' href='/articles/tags#parsing'>parsing</a>
+<a data-scroll style='font-size: 90%' href='/articles/tags#number theory'>number theory</a>
+
+</div>
+
+
+<ul id="posts">
+	
+		<li class="post">
+	<div class="meta">
+		<div class="thumbnail">
+			<img src="http://files.sevko.io/img/thumbnails/exceptions_in_c.png" alt="A key.">
+		</div
+		><div class="text">
+			<a href="/articles/exceptions-in-c">emulating exceptions in C</a>
+			<span class="date">22 Aug 2015</span>
+			<div>
+				<span class="tags">tags:</span>
+
+				
+					
+						<a href="/articles/tags#c">c</a>,
+					
+				
+					
+						<a href="/articles/tags#parsing">parsing</a>,
+					
+				
+					
+				
+				<a href="/articles/tags#algorithms">algorithms</a>
+			</div>
+		</div>
+		<div class="summary">A practical use-case for emulating exceptions in C with longjmp()/setjmp().</div>
+	</div>
+
+	<div class="excerpt">
+		I recently stumbled across a practical use-case for simulated exceptions in C while writing a recursive-descent JSON
+parser for fun and profit. In this quick write-up, I’ll give a high-level overview of the problems that I ran into, why
+exceptions were ideal for error handling, and how I emulated them in C.
+	</div>
+</li>
+
+	
+		<li class="post">
+	<div class="meta">
+		<div class="thumbnail">
+			<img src="http://files.sevko.io/img/thumbnails/rsa.png" alt="A key.">
+		</div
+		><div class="text">
+			<a href="/articles/rsa">RSA: implementation and proofs</a>
+			<span class="date">14 Jun 2015</span>
+			<div>
+				<span class="tags">tags:</span>
+
+				
+					
+						<a href="/articles/tags#math">math</a>,
+					
+				
+					
+						<a href="/articles/tags#prime numbers">prime numbers</a>,
+					
+				
+					
+						<a href="/articles/tags#algorithms">algorithms</a>,
+					
+				
+					
+						<a href="/articles/tags#python">python</a>,
+					
+				
+					
+				
+				<a href="/articles/tags#number theory">number theory</a>
+			</div>
+		</div>
+		<div class="summary">A Python implementation of RSA, and proofs of the algorithms it uses.</div>
+	</div>
+
+	<div class="excerpt">
+		RSA is a public-key, or asymmetric, encryption algorithm.
+In contrast to symmetric algorithms, like DES and
+AES, which use the same key for both encryption and
+decryption, RSA employs two distinct keys: a public key used to encrypt data, and a private key used to
+decrypt whatever was encrypted with the public one. The beauty of public-key encryption is that the parties involved
+never need to exchange a master key, meaning that communications can be securely encrypted without any prior contact.
+	</div>
+</li>
+
+	
+		<li class="post">
+	<div class="meta">
+		<div class="thumbnail">
+			<img src="http://files.sevko.io/img/thumbnails/nand2tetris_review.png" alt="The cover of Nand2Tetris.">
+		</div
+		><div class="text">
+			<a href="/articles/nand-2-tetris">nand2tetris: a book review and recap</a>
+			<span class="date">01 Jan 2015</span>
+			<div>
+				<span class="tags">tags:</span>
+
+				
+					
+						<a href="/articles/tags#book review">book review</a>,
+					
+				
+					
+				
+				<a href="/articles/tags#computer engineering">computer engineering</a>
+			</div>
+		</div>
+		<div class="summary">A review and recap of The Elements of Computing Systems (Nand2Tetris).</div>
+	</div>
+
+	<div class="excerpt">
+		Nand2Tetris, or The Elements of Computing Systems, is a twelve-part course in
+fundamental computer engineering that steps you through the creation of a computer from the ground up, starting with
+NAND logic gates and ending with an operating system capable of running a complicated program like Tetris.
+	</div>
+</li>
+
+	
+		<li class="post">
+	<div class="meta">
+		<div class="thumbnail">
+			<img src="http://files.sevko.io/img/thumbnails/prime_number_spiral.png" alt="An Ulam prime-number spiral.">
+		</div
+		><div class="text">
+			<a href="/articles/prime-number-spirals">prime number spirals</a>
+			<span class="date">01 Oct 2014</span>
+			<div>
+				<span class="tags">tags:</span>
+
+				
+					
+						<a href="/articles/tags#math">math</a>,
+					
+				
+					
+						<a href="/articles/tags#visualizations">visualizations</a>,
+					
+				
+					
+						<a href="/articles/tags#prime numbers">prime numbers</a>,
+					
+				
+					
+				
+				<a href="/articles/tags#javascript">javascript</a>
+			</div>
+		</div>
+		<div class="summary">An introduction to the Ulam and Sacks prime number spirals, and Javascript implementations of each.</div>
+	</div>
+
+	<div class="excerpt">
+		Prime number spirals are visualizations of the distribution of prime numbers that underscore their frequent occurrences
+along certain polynomials. They’re conceptually simple, yet create order out of the apparent chaos of primes and are
+fairly beautiful. We’ll explore the Ulam and Sacks spirals, some of their underlying theory,
+and algorithms to render each.
+	</div>
+</li>
+
+	
+		<li class="post">
+	<div class="meta">
+		<div class="thumbnail">
+			<img src="http://files.sevko.io/img/thumbnails/power_set.png" alt="A power set lattice.">
+		</div
+		><div class="text">
+			<a href="/articles/power-set-algorithms">power set algorithms</a>
+			<span class="date">21 Sep 2014</span>
+			<div>
+				<span class="tags">tags:</span>
+
+				
+					
+						<a href="/articles/tags#math">math</a>,
+					
+				
+					
+						<a href="/articles/tags#sets">sets</a>,
+					
+				
+					
+						<a href="/articles/tags#algorithms">algorithms</a>,
+					
+				
+					
+				
+				<a href="/articles/tags#python">python</a>
+			</div>
+		</div>
+		<div class="summary">An overview of the math behind power sets, and implementation of three algorithms to generate them.</div>
+	</div>
+
+	<div class="excerpt">
+		The power set of a set is the set of all its subsets, or a collection of all the different combinations of items
+contained in that given set: in this write-up, we’ll briefly explore the math behind power sets, and derive and compare
+three different algorithms used to generate them.
+	</div>
+</li>
+
+	
+</ul>
+
+		</div>
+
+	</body>
+</html>

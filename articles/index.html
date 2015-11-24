@@ -1,0 +1,24 @@
+---
+title: articles
+description: Severyn Kozak's software-development and computer-science articles.
+stylesheet: true
+sitemap:
+  changefreq: weekly
+  priority: 0.7
+head: |
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Severyn Kozak"
+    href="http://sevko.io/feed.xml">
+---
+
+<a href="/articles/feed.xml">[RSS]</a>
+
+{% include tag_cloud.html %}
+
+<ul id="posts">
+	{% for post in site.posts %}
+		{% include post_summary.html %}
+	{% endfor %}
+</ul>

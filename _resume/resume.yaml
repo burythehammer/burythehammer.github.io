@@ -1,0 +1,119 @@
+firstname: Severyn
+familyname: Kozak
+github_id: github.com/sevko
+linkedin_id: linkedin.com/in/sevko
+bio_data:
+  email: sev@mit.edu
+  phone: 347.882.1722
+  website: sevko.io
+  skills:
+    details:
+      -
+        type: Languages
+        items:
+          - Python
+          - C
+          - Javascript
+          - Haskell
+          - Java
+          - CSS
+          - SASS
+      -
+        type: Frameworks
+        items:
+          - Flask
+          - Jekyll
+          - Node.js
+          - PostGIS
+      -
+        type: Tools
+        items:
+          - Linux
+          - Git
+          - Nginx
+          - PostgreSQL
+          - Elasticsearch
+          - LevelDB
+  education:
+    schools:
+      -
+        institution: MIT
+        degree: Bachelor's in Computer Science
+        graduation_year: "2015-'19"
+      -
+        institution: Stuyvesant High School
+        graduation_year: "2010-'14"
+        details:
+          - 2370 on the SAT
+          - High Honors in Computer Science
+  experience:
+    items:
+      -
+        title: Software Engineering Intern
+        organisation: "[Mapzen](https://mapzen.com/)"
+        from: 07/2014
+        to: 06/2015
+        description:
+          Interned at Mapzen, an open-source and open-data geographic software startup, during my
+          gap year.
+        details:
+          - developed our Node.js/Elasticsearch-based geocoder, [Pelias](https://github.com/pelias), with a team of three
+          - reduced data build times from days to hours, improved geo-hierarchies, added new datasets, etc.
+          - managed regular deployments in multiple environments and follow-up testing/QA
+          - worked on our ultra high-volume map [vector tile service](https://mapzen.com/projects/vector-tiles)'s
+            PostgreSQL, Python, and AWS infrastructure
+          - worked with huge geographic datasets like OpenStreetMap, OpenAddresses, and GeoNames
+
+      -
+        title: Computer Science Tutor
+        organisation: self-employed
+        from: 01/2014
+        to: 06/2014
+        details:
+          - tutored two high-school students in introductory computer science
+          - taught a middle-school student how to program in Python
+
+      -
+        title: Programming Mentor/TA
+        organisation: "[CSTUY](https://cstuy.org/)"
+        from: 10/2013
+        to: 05/2014
+        description:
+          Mentored 25 high school students at weekly, three-hour programming sessions with a number
+          of other TAs and teachers. Helped introduce them to Python, databases, simple web-dev, and
+          basic computer science.
+  other_projects:
+    items:
+      -
+        name: portfolio
+        headline: "a collection of all my personal work. <<github.com/sevko/portfolio>>"
+        points:
+          - Algorithm implementations, presentation decks, pretty
+            visualizations, etc.
+      -
+        name: bitshift
+        headline: a source-code search engine. <<bitshift.it>>
+        points:
+          - Demo'd at the Sept. 2014 **New York Tech Meetup** ([video](https://vimeo.com/106072869)).
+  competitions:
+    details:
+      -
+        name: NYC Big Apps
+        team: Tour de City
+        position: "[Top 5](http://www.alleywatch.com/2014/07/wait-until-you-see-who-the-nyc-big-apps-peoples-choices-were/3/) people`s choice"
+      -
+        name: App-e-feat competition
+        team: Tour de City
+        position: "[3<sup>rd</sup>](http://www.appefeat.org/contest/)"
+      -
+        name: Dream It. Code It. Win it.
+        team: Tour de City
+        position: "[high-school division finalist](http://dreamitcodeitwinit.wordpress.com/2014/05/09/finalists-of-dream-it-code-it-win-it-high-school-division/)"
+      -
+        name: picoCTF
+        team: Qubit
+        position: "[71<sup>st</sup>/1938](https://picoctf.com/scoreboard)"
+      -
+        name: UFOCTF
+        team: Qubit
+        position: "[38<sup>th</sup>/353](https://ctftime.org/event/99)"
