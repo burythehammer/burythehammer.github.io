@@ -1,7 +1,7 @@
 - name: hearthwiz
   time: Jan - Jul 15
   url: http://hearthwiz.herokuapp.com
-  tagline: source code search engine
+  tagline: hearthstone management app
   tools: Ruby, Rails, SASS, Cucumber, Capybara
   description: |
       A light website for tracking and managing Hearthstone card collections, written in Ruby on Rails.
