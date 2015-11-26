@@ -5,7 +5,7 @@
 @import mixins
 
 div#header li#blog a
-	color: $baseColor1
+	color: $colour-primary
 	font-weight: bold
 
 div#meta
@@ -13,11 +13,11 @@ div#meta
 
 	span
 		bottom: 0
-		color: $baseColor2
+		color: $colour-highlight
 
 	div#tags
 		span
-			color: $baseColor1
+			color: $colour-primary
 
 div#post
 	margin-bottom: 50px
@@ -27,7 +27,7 @@ div#post
 		width: 100%
 
 		.tocnumber
-			color: $baseColor1
+			color: $colour-primary
 
 		.toctext
 			float: right
@@ -98,13 +98,13 @@ section#comments
 	.post-action > input
 		@extend .t3
 
-		background-color: $baseColor1
+		background-color: $colour-primary
 		color: white
 		font-size: 0.9em
 		padding: 4px 30px
 
 		&:hover
-			background-color: $baseColor1 * 0.85
+			background-color: $colour-primary * 0.85
 
 	#comments-noscript
 		color: red

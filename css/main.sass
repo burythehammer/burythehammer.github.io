@@ -8,9 +8,11 @@ html, body
 	height: 100%
 	padding: 0
 	margin: 0
+	background-color: $colour-background
+	color: $colour-primary
 
 div#main
-	font-family: "Source Sans Pro", sans-serif, helvetica
+	font-family: $open-sans
 	font-size: 1em
 	line-height: 1.34em
 	height: 100%
@@ -22,11 +24,11 @@ div#main
 a
 	@extend .t3
 
-	color: $baseColor2
+	color: $colour-highlight
 	text-decoration: none
 
 	&:hover
-		color: $baseColor1
+		color: $white
 
 ul
 	list-style: none
@@ -34,7 +36,8 @@ ul
 	margin: 0
 
 h1, h2, h3, h4, h5, h6
-	color: $baseColor1
+	color: $colour-primary
+	font-family: $roboto-slab
 	line-height: 1.1em
 	margin: 0
 	margin-bottom: 10px
