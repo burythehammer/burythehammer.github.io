@@ -2,8 +2,8 @@
 layout: post
 title: "New Beginnings"
 date: 2015-10-04 23:09:00
-categories: meta
 featured_image: /images/cover.jpg
+tags: meta
 ---
 
 In a last ditch effort to attempt to be professional about something, I've relaunched this blog.

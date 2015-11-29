@@ -2,8 +2,8 @@
 layout: post
 title: "Fallout hacking minigame script"
 date: 2015-11-16 23:30:50
-categories: coding
-featured_image: /images/vault_boy.jpg
+tags: coding
+featured_image: /_images/vault_boy.jpg
 ---
 The password cracking minigame on Fallout is so annoying, I made a little script to help you do it.
 

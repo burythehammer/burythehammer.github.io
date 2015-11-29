@@ -2,8 +2,9 @@
 layout: post
 title: "Testing With Microservices"
 date: 2015-11-11 18:20:50
-categories: testing
-featured_image: /images/cover.jpg
+tags:
+  - testing
+  - opencredo
 ---
 
 I've got some free, non-billable time at the moment at work, so they've let me do a bit of research and development, as well as some technical blog posts.
