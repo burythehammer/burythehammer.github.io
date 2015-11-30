@@ -1,11 +1,31 @@
+
+- name: sedex advance
+  time: Jul 15 - current
+  url: http://www.sedexglobal.com/member-services/sedex-advance/
+  tagline: ethical supply chain management
+  tools: cucumber-jvm, selenium, java 8, jenkins
+  description: |
+    Responsible for maintaining and extending the CucumberJVM / Selenium test suite of a large scale application, developed with a microservice architecture.
+
+
+- name: web ui testing quickstart
+  time: Nov 15 - current
+  url: https://github.com/burythehammer/ruby-acceptance-testing-quickstart
+  tagline: quickstart web testing framework in ruby
+  tools: ruby, cucumber, capybara, selenium, phantom.js
+  description: A framework which you can literally start web ui testing with in minutes, using the best tools the industry has to offer.
+  github:
+    url: burythehammer/ruby-acceptance-testing-quickstart
+    branch: master
+
+
 - name: hearthwiz
   time: Jan - Jul 15
   url: http://hearthwiz.herokuapp.com
   tagline: hearthstone management app
-  tools: Ruby, Rails, SASS, Cucumber, Capybara
+  tools: ruby, rails, sass, cucumber, capybara
   description: |
-      A light website for tracking and managing Hearthstone card collections, written in Ruby on Rails.
-      A personal project intended to be deployed on my own website.
+      A light website for tracking and managing Hearthstone card collections, written in Ruby on Rails. A personal project intended to be deployed on my own website.
   github:
     url: burythehammer/hearthwiz
     branch: master
