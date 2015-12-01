@@ -6,16 +6,15 @@
   tools: cucumber-jvm, selenium, java 8, jenkins
   description: Responsible for maintaining and extending the CucumberJVM / Selenium test suite of a large scale application, developed with a microservice architecture.
 
-
-- name: burythehammer.com
-    time: nov 15
-    url: http://www.burythehammer.com
-    tagline: personal website
-    tools: ruby, jekyll, sass, html
-    description: Look around you.
-    github:
-      url: https://github.com/burythehammer/burythehammer.github.io
-      branch: master
+- name: burythehammer website
+  time: Nov 15
+  url: www.burythehammer.com
+  tagline: personal website
+  tools: ruby, jekyll, sass, html
+  description: Look around you.
+  github:
+    url: https://github.com/burythehammer/burythehammer.github.io
+    branch: master
 
 - name: fallout password checker
   time: nov 15
