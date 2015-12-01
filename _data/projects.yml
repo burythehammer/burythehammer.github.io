@@ -1,31 +1,56 @@
 
 - name: sedex advance
-  time: Jul 15 - current
+  time: jul 15 - current
   url: http://www.sedexglobal.com/member-services/sedex-advance/
   tagline: ethical supply chain management
   tools: cucumber-jvm, selenium, java 8, jenkins
-  description: |
-    Responsible for maintaining and extending the CucumberJVM / Selenium test suite of a large scale application, developed with a microservice architecture.
+  description: Responsible for maintaining and extending the CucumberJVM / Selenium test suite of a large scale application, developed with a microservice architecture.
 
+
+- name: burythehammer.com
+    time: nov 15
+    url: http://www.burythehammer.com
+    tagline: personal website
+    tools: ruby, jekyll, sass, html
+    description: Look around you.
+    github:
+      url: https://github.com/burythehammer/burythehammer.github.io
+      branch: master
+
+- name: fallout password checker
+  time: nov 15
+  url: https://github.com/burythehammer/fallout-password-checker
+  tagline: videogame minigame solver
+  tools: ruby
+  description: A script to help you crack passwords in the terminal hacking minigame in Fallout 3 and Fallout New Vegas.
+  github:
+    url: burythehammer/fallout-password-checker
+    branch: master
 
 - name: web ui testing quickstart
-  time: Nov 15 - current
-  url: https://github.com/burythehammer/ruby-acceptance-testing-quickstart
-  tagline: quickstart web testing framework in ruby
+  time: nov 15 - current
+  url: https://www.opencredo.com/2015/11/23/ruby-acceptance-testing-framework/
+  tagline: web testing framework
   tools: ruby, cucumber, capybara, selenium, phantom.js
-  description: A framework which you can literally start web ui testing with in minutes, using the best tools the industry has to offer.
+  description: An open source framework which to start web ui testing with in minutes, using the best tools and practices the industry has to offer.
   github:
     url: burythehammer/ruby-acceptance-testing-quickstart
     branch: master
 
-
 - name: hearthwiz
-  time: Jan - Jul 15
+  time: jan - jul 15
   url: http://hearthwiz.herokuapp.com
   tagline: hearthstone management app
   tools: ruby, rails, sass, cucumber, capybara
-  description: |
-      A light website for tracking and managing Hearthstone card collections, written in Ruby on Rails. A personal project intended to be deployed on my own website.
+  description: A light website for tracking and managing Hearthstone card collections, written in rails. A personal project deployed on my own website.
   github:
     url: burythehammer/hearthwiz
     branch: master
+
+
+- name: usemango
+  time: oct 13 - dec 14
+  url: http://www.usemango.co.uk
+  tagline: test tool and framework
+  tools: vbscript, qtp, alm, .net
+  description: An enterprise tool and testing framework for the HP software ecosystem.
