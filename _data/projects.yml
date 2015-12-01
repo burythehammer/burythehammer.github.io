@@ -8,12 +8,12 @@
 
 - name: burythehammer website
   time: Nov 15
-  url: www.burythehammer.com
+  url: http://www.burythehammer.com
   tagline: personal website
   tools: ruby, jekyll, sass, html
-  description: Look around you.
+  description: Look around you! My personal portfolio and website. Graciously hacked from Sevko.io.
   github:
-    url: https://github.com/burythehammer/burythehammer.github.io
+    url: burythehammer/burythehammer.github.io
     branch: master
 
 - name: fallout password checker
