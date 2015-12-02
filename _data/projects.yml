@@ -4,14 +4,14 @@
   url: http://www.sedexglobal.com/member-services/sedex-advance/
   tagline: ethical supply chain management
   tools: cucumber-jvm, selenium, java 8, jenkins
-  description: Responsible for maintaining and extending the CucumberJVM / Selenium test suite of a large scale application, developed with a microservice architecture.
+  description: Maintaining and extending the CucumberJVM / Selenium test suite of a massively scaled application, developed with a microservice architecture.
 
-- name: burythehammer website
-  time: Nov 15
+- name: this website
+  time: nov 15 - dec 15
   url: http://www.burythehammer.com
   tagline: personal website
   tools: ruby, jekyll, sass, html
-  description: Look around you! My personal portfolio and website. Graciously hacked from Sevko.io.
+  description: Look around you! My personal portfolio and website. Graciously hacked from http://sevko.io.
   github:
     url: burythehammer/burythehammer.github.io
     branch: master
@@ -21,12 +21,12 @@
   url: https://github.com/burythehammer/fallout-password-checker
   tagline: videogame minigame solver
   tools: ruby
-  description: A script to help you crack passwords in the terminal hacking minigame in Fallout 3 and Fallout New Vegas.
+  description: A script to help you solve the terminal hacking minigame in Fallout 3 and Fallout New Vegas.
   github:
     url: burythehammer/fallout-password-checker
     branch: master
 
-- name: web ui testing quickstart
+- name: web testing quickstart
   time: nov 15 - current
   url: https://www.opencredo.com/2015/11/23/ruby-acceptance-testing-framework/
   tagline: web testing framework
@@ -46,6 +46,12 @@
     url: burythehammer/hearthwiz
     branch: master
 
+- name: itv hub
+  time: jan 15 - jul 15
+  url: http://www.itv.com
+  tagline: video on demand service
+  tools: ruby, scala, cucumber, gatling, selenium, ruby
+  description: performance and functional testing for the rebuild of itv's video on demand website.
 
 - name: usemango
   time: oct 13 - dec 14
