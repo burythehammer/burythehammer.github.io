@@ -16,22 +16,22 @@
     url: burythehammer/burythehammer.github.io
     branch: master
 
-- name: fallout password checker
+- name: fallout terminal hacker
   time: nov 15
   url: https://github.com/burythehammer/fallout-password-checker
-  tagline: videogame minigame solver
+  tagline: videogame minigame assistant
   tools: ruby
   description: A script to help you solve the terminal hacking minigame in Fallout 3 and Fallout New Vegas.
   github:
     url: burythehammer/fallout-password-checker
     branch: master
 
-- name: web testing quickstart
+- name: acceptance test quickstart
   time: nov 15 - current
   url: https://www.opencredo.com/2015/11/23/ruby-acceptance-testing-framework/
   tagline: web testing framework
-  tools: ruby, cucumber, capybara, selenium, phantom.js
-  description: An open source framework which to start web ui testing with in minutes, using the best tools and practices the industry has to offer.
+  tools: ruby, cucumber, capybara, selenium
+  description: An open source framework which to start web ui testing with in minutes, using the best tools and practices the industry has to offer. Includes headless testing, parallel test execution, browserstack support and automated documentation generation.
   github:
     url: burythehammer/ruby-acceptance-testing-quickstart
     branch: master
@@ -52,6 +52,13 @@
   tagline: video on demand service
   tools: ruby, scala, cucumber, gatling, selenium, ruby
   description: performance and functional testing for the rebuild of itv's video on demand website.
+
+- name: usemango
+  time: oct 13 - dec 14
+  url: http://www.usemango.co.uk
+  tagline: test tool and framework
+  tools: vbscript, qtp, alm, .net
+  description: An enterprise tool and testing framework for the HP software ecosystem.
 
 - name: usemango
   time: oct 13 - dec 14
