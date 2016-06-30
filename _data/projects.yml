@@ -1,9 +1,27 @@
 
-- name: sedex advance
+- name: cognito tooling
   time: jul 15 - current
   url: http://www.sedexglobal.com/member-services/sedex-advance/
   tagline: ethical supply chain management
-  tools: cucumber-jvm, selenium, java 8, jenkins
+  tools: cucumber-jvm, spring, java 8, cassandra, spark
+  description: Designing and building an API framework that tested Spark batch jobs against a Cassandra based CQRS event-sourcing system. Developed in Spring and Java.
+
+
+- name: foosbot
+  time: jul 15 - current
+  url: https://github.com/burythehammer/foosbot
+  tagline: foosball ranking slack bot
+  tools: python, theano, slack
+  description: A foosball bot that tracks and ranks players via Slack.
+  github:
+    url: burythehammer/foosbot
+    branch: master
+
+- name: sedex advance
+  time: jul 15 - may 16
+  url: http://www.sedexglobal.com/member-services/sedex-advance/
+  tagline: ethical supply chain management
+  tools: cucumber-jvm, selenium, java 8, jenkins, spark, neo4j, spring boot
   description: Maintaining and extending the CucumberJVM / Selenium test suite of a massively scaled application, developed with a microservice architecture.
 
 - name: this website
@@ -11,7 +29,7 @@
   url: http://www.burythehammer.com
   tagline: personal website
   tools: ruby, jekyll, sass, html
-  description: Look around you! My personal portfolio and website. Graciously hacked from http://sevko.io.
+  description: Look around you! My personal portfolio and website. Graciously modified from http://sevko.io.
   github:
     url: burythehammer/burythehammer.github.io
     branch: master
