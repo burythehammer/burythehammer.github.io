@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/burythehammer
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.burythehammer.com
+  * I am burythehammer (https://keybase.io/burythehammer) on keybase.
+  * I have a public key with fingerprint CED0 B839 8DCC A533 DD41  6F43 2D8E E494 6923 26D0
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "012057fac411d796ec98b62f24eecf2e8d383a3c054683f8d3ce627c375d845e99dd0a",
+            "fingerprint": "ced0b8398dcca533dd416f432d8ee494692326d0",
+            "host": "keybase.io",
+            "key_id": "2d8ee494692326d0",
+            "kid": "01011a1a719123023b16b24b7e8fdad57a812e0ccf7c41cdbfe8c36ced36ef6cd6ae0a",
+            "uid": "fe421758fe59012398bc691f8b8d0419",
+            "username": "burythehammer"
+        },
+        "service": {
+            "hostname": "www.burythehammer.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1468601263,
+    "expire_in": 157680000,
+    "prev": "611810c73d29f9fbb77dfbd8f3aaf95f6a55ebbc334abdcebf5ebf4dc3377825",
+    "seqno": 13,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.53
+Comment: https://keybase.io/crypto
+
+yMN3AnicbZJ9TFVlHMcv8bK4jQXdazagZQdBU7je837OXS0whEkWIFML2C7nnOc5
+3OPlvnjfiPAOJhFjA5GJbPJiAjKLZEShOciSNzFYBCE1iD+UGBbGHCJ2w2k9l+kf
+bT3/PPs9z/f3+X1/v+cZCgtUqQMSji/UKTFxEwFj/e1u1aFKTVcxJtpAEWYoxsxw
+Y4MFADpdRrMCMAOmxwk9zcqCROE4YHkGSjwnMoRMUBBKMgE5QHKkQEp6mmI4Ukah
+BBmClUiWBhxFQ54HQC9g8ZisWPOhw+5QrC6ElSDQixzJc0CSBJokAaBwRqZIAnAQ
+UjzF8ARJMECPEk02pz8DmRMFJ9QpNnSGAuOGvf/RP/Wtx3EBF1icxwlST5AizogE
+JbKQk4EAaFbgcALqJUlmUWsSEGXISSSDfJEMlBkJMALc8O3ewMmQInCW5mRI82gk
+yLgoMTwucyIH9BTO+4VO6LAKFojUottR5DJBk2CxQAfmjcfQlUeRoH+6/naeyAoL
+C3X/keokmwWR7A6byybZCpDE5HLZDX6Cq8i+kQJF4xOYUVSsAA0VJXigw6nYrJgB
+R0rJpfjpOHoPBlllyHgMfmBXHNCo+BU0y3B6tPxloAchGRzncL3EkoDgZV4WRZYF
+sgg4mRQEmadlRqBpKIoSSVKCCCQoyiiUKYAOWJYjaMzf3hGrDbFRKZeQj5hOJd8q
+uNwOiHkH+nODVAFqVUjwM/7fplKHhj/9g3sHwlXnGpN6s3tqrc2NjRNZN76/sqtz
+pDh+/MTluscF3R3D6drXV7Td9IulLR+bV+L/nKx5NnI4rfAAdrLb91bE4Ybqigjj
+wUv106ExKycXlX0LAfUxudc62tYmzzRUtInC4crf9kSNEHe8qqbZqteu7OwIHkq5
++HxgdkIUl7xa1/KpKa/z24ObdubM+x4/Gu1qnqvOmQ4dSDp3YTNMt4SXzD64yme+
+NOgd1v7yzfvlbexy6545d6n6fnX2etjU0NElZ3SOb2I6ubfsvXffnsmzflm123C3
+YXm6j8q6UHY7Fzter07MvFVYnjz0edz+OI1ptWTmq7AsQ0mqmV6u/k4n3qLKXl1U
+FrOLHml1tde/kHuVUV9qhvnDh5dfXk9rXvtI81nPQvH+kqaogsQOncbg/EPc21sz
+ONNzaHTpbO47LZ+8oont96aOjW3xqBpdyectU50HtOmjfwWrg8aPhXiqaorunt/e
+91zQ+uR6SseOyG3TU3dSmupuH50bXD3hO5Vy3x1Z//Pu343toQ/YLs12atHXagqM
+qauNkOOcBgVsOfvjVcM8O/5rxunKECE64V7FpZQIszFnc6sHrz4zNvem8XQfPbkv
+zbnt4nVTxtatA0mT5dpjN2b/1sZmVjZGT73gtpeuGXbleI/3chXDpUce5jn+Ib8e
+ubmU+EP7jtb5m1SsfO+NyJ9Sr236F4Tsywg=
+=1JUr
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/burythehammer
+
+==================================================================
