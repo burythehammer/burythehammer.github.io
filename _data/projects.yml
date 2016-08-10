@@ -1,11 +1,15 @@
+- name: ???
+  time: aug 16 - current
+  tagline: under nda
+  tools: ???
+  description: My current job is under NDA, so unfortunately I can't brag about it publicly! You can be assured it's very exciting.
 
 - name: cognito tooling
-  time: jul 15 - current
-  url: http://www.sedexglobal.com/member-services/sedex-advance/
-  tagline: ethical supply chain management
-  tools: cucumber-jvm, spring, java 8, cassandra, spark
-  description: Designing and building an API framework that tested Spark batch jobs against a Cassandra based CQRS event-sourcing system. Developed in Spring and Java.
-
+  time: jul 15 - aug 16
+  url: http://www.cognitoiq.com/
+  tagline: CQRS tooling and querying framework
+  tools: cucumber-jvm, spring, java 8, cassandra, spark, sql
+  description: Designing and building an API framework that tested Spark batch jobs against a Cassandra based CQRS event-sourcing system and other relational databases. Developed in Spring and Java.
 
 - name: foosbot
   time: jul 15 - current
