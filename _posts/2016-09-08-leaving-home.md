@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "I'm leaving Haringey"
+title: "On leaving home"
 date: 2016-09-08 13:43:00
 tags:
   - personal
