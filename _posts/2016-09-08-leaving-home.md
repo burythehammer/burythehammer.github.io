@@ -21,4 +21,4 @@ Despite all that, I could come home and chill out. And relax. And hang out with 
 
 Of all the things I'll miss, the obvious is [Gokuyuzu](http://www.gokyuzurestaurant.co.uk/). Or maybe [Yasir Halim](http://www.yasarhalim.com/). Actually, it's got to be Buy2Save, on Turnpike Lane. I swear to God, I'll never love a local shop the way I love that Turkish shop.
 
-I would prefer not to have a bathroom that’s [parodied on Mitchell \& Webb](https://www.youtube.com/watch?v=nWoWHzq21tA), though.
+I would prefer not to have a bathroom that’s [parodied on Mitchell & Webb](https://www.youtube.com/watch?v=nWoWHzq21tA), though.
