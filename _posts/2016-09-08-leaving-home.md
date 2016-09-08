@@ -19,8 +19,6 @@ I was the one who changed the gas.
 
 Despite all that, I could come home and chill out. And relax. And hang out with a friend. I'm about to go on a preposterous three week holiday around Australia and the far east. The upcoming journey has made me pontificate about my home life. I'm temporarily homeless, and it's the weirdest feeling. Yes, home is boring and safe, but it's also where we spend most of our time. It's somewhere we can be alone. It's worth appreciating it from time to time.
 
-Of all the things I'll miss, the obvious is Gokuyuzu. Or maybe Yasir Halim. Actually, it's got to be Buy2Save, on Turnpike Lane. I swear to God, I'll never love a local shop the way I love that Turkish shop.
+Of all the things I'll miss, the obvious is [Gokuyuzu](http://www.gokyuzurestaurant.co.uk/). Or maybe [Yasir Halim](http://www.yasarhalim.com/). Actually, it's got to be Buy2Save, on Turnpike Lane. I swear to God, I'll never love a local shop the way I love that Turkish shop.
 
-I would prefer not to have a bathroom that’s parodied on Mitchell \& Webb, though.
-
-https://www.youtube.com/watch?v=nWoWHzq21tA
+I would prefer not to have a bathroom that’s [parodied on Mitchell \& Webb](https://www.youtube.com/watch?v=nWoWHzq21tA), though.
