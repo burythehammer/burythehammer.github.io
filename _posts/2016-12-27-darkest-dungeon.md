@@ -1,14 +1,12 @@
 ---
 layout: post
-title: "Darkest Dungeon"
+title: "Darkest Dungeon impressions"
 date: 2016-12-27 17:31:00
 tags:
   - impressions
   - videogames
 ---
 
-Darkest Dungeon
----------
 
 Darkest Dungeon is a mission based dungeon crawler with heavy RPG elements. Screenshots don’t really do it justice, apart from making it look it’s going to be bloody hard. And to be fair, visuals aren’t Darkest Dungeon’s greatest asset. It’s very hard to tell how good it is from looks alone.
 
