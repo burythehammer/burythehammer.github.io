@@ -9,7 +9,7 @@ tags:
 
 [Darkest Dungeon](http://store.steampowered.com/app/262060/) is a mission based dungeon crawler with heavy RPG elements. Screenshots don’t really do it justice, apart from making it look it’s going to be bloody hard. And to be fair, visuals aren’t Darkest Dungeon’s greatest asset. It’s very hard to tell how good it is from looks alone.
 
-![Darkest Dungeon](http://cdn.escapistmagazine.com/media/global/images/library/deriv/1257/1257406.jpg)
+![](https://i.imgur.com/G2OGzUy.jpg)
 
 Darkest Dungeon is cruel at first. It looks like a standard dungeon crawler: but if you try and play it like one, it’ll tear you apart. In a game like XCOM, which also has the “send people out on missions” structure, losing a mission is catastrophic and so is letting characters die. In Darkest Dungeon, they literally could not give a shit about your characters. New characters gain quirks, good and bad, with frightening randomness. That guy you spent thousands on could turn out to have really had problems a few quests down the road. It’s probably worth ditching them.
 
