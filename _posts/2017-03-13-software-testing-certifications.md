@@ -15,3 +15,5 @@ I'm thankfully at the point in my career where I have plenty of options availabl
 If you want to learn more about testing, work in more teams, learn some programming, do some coding side projects, read some books, attend meet ups and conferences. And be discerning.
 
 The best thing you can do, honestly, is find a great company and/or team and prepare to learn and be mentored (easier said than done!).
+
+Of course, I'm not the first person to think along these lines. This post by [Albert Gareev](https://www.quora.com/Is-testing-certification-ISTQB-CSTE-etc-worth-it-for-getting-testing-jobs-Are-there-any-best-options-for-QA/answer/Albert-Gareev) is much more elequont than I am, and Martin Fowler (for it is he) has also talked about [the problem with technical certifications](https://martinfowler.com/bliki/CertificationCompetenceCorrelation.html).
