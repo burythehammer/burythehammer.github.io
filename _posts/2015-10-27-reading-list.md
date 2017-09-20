@@ -3,7 +3,6 @@ layout: post
 title: "Reading List"
 tagline: "Back in the day, we'd have called this a blogroll"
 date: 2015-10-27 12:19:50
-featured_image: /_images/books.jpg
 tags: 
       - reading
       - politics

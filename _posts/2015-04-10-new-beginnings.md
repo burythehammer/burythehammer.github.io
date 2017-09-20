@@ -2,7 +2,6 @@
 layout: post
 title: "New Beginnings"
 date: 2015-10-04 23:09:00
-featured_image: /images/cover.jpg
 tags: meta
 ---
 

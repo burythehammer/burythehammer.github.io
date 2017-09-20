@@ -2,7 +2,9 @@
 layout: post
 title: "Testing a Spark Application"
 date: 2017-05-09 12:00:00
-tags: testing
+tags: 
+- testing
+- coding
 ---
 
 I wrote something over at the OpenCredo blog about [Testing Spark](https://opencredo.com/spark-testing/).
