@@ -3,9 +3,13 @@ layout: post
 title: "Testing a Spark Application"
 date: 2017-05-09 12:00:00
 tags: 
-- testing
-- coding
+    - testing
+    - coding
+    - opencredo
+
 ---
+
+Data engineering / analysis applications are just like any other software. You need to test them. But how?
 
 I wrote something over at the OpenCredo blog about [Testing Spark](https://opencredo.com/spark-testing/).
 

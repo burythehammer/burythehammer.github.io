@@ -3,8 +3,8 @@ layout: post
 title: "You Are Ignoring Non-functional Testing"
 date: 2016-06-15 12:00:00
 tags: 
-- testing
-- coding
+    - testing
+    - opencredo
 ---
 
 Testing is always focused on functional testing. Non-functional testing, by comparison, is treated like a second class citizen. This means that functional requirements get refined, and non-functional requirements are ignored until the very end.
