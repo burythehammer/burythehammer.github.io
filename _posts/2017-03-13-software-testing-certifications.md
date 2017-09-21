@@ -6,9 +6,9 @@ tags:
   - testing
 ---
 
-I've done the ISTQB foundation.
+In principle, they could be. In practice, no.
 
-It was a case in memorising useless terminology and methodology that is at best outdated, and at worst completely irrelevant. It also seemed to see iterative development and automation as 'incredibly advanced' (sigh) topics, which IMO does more damage to the industry than helps it.
+I've done the ISTQB foundation. It was a case in memorising useless terminology and methodology that is at best outdated, and at worst completely irrelevant. It also seemed to see iterative development and automation as 'incredibly advanced' (sigh) topics, which IMO does more damage to the industry than helps it.
 
 I'm thankfully at the point in my career where I have plenty of options available to me, but frankly, any job that requires me to have arbitrary useless qualifications is a warning sign more than an opportunity. If they don't put any thought into their interview criteria, what makes you think they put any thought into their software, or you once you join?
 
