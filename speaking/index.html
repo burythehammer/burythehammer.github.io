@@ -1,0 +1,25 @@
+---
+title: speaking
+description: Matt Long's speaking events
+stylesheet: true
+sitemap:
+  changefreq: monthly
+  priority: 1.0
+---
+
+<div id="speaking">
+	{% for speaking in site.data.speaking %}
+		<div class="speak">
+			<h1>{{ speaking.event }}</h1>
+			<span class="separator">|</span>
+			<span>{{ speaking.location }}</span>
+			<div class="meta">
+				<span class="time">{{ speaking.date }}</span>
+			</div>
+			<div class="description">{{ speaking.talk | markdownify }}</div>
+				<div class="links">
+					<div class="website"><a href="{{ speaking.url }}">Link</a></div>
+				</div>
+		</div>
+	{% endfor %}
+</div>
