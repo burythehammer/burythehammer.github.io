@@ -2,7 +2,7 @@
   location: The Clarendon Centre, Brighton
   date: 16th March 2018
   url: https://dojo.ministryoftesting.com/events/testbash-brighton-2018
-  talk: Testing Programmable Infrastructure
+  talk: Why We Should Test Programmable Infrastructure
 
 - event: muCon 2017
   location: Codenode, London
@@ -20,7 +20,7 @@
 
 - event: QCon 2017
   location: QEII Conference Centre, London
-  date: 29th September 2017
+  date: 7th March 2017
   url: https://www.infoq.com/presentations/opencredo-ruby
   talk: Testing Programmable Infrastructure
 
