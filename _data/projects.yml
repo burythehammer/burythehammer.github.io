@@ -8,9 +8,9 @@
   time: sept 16 - jan 17
   tagline: maintaining infrastructure across multiple clouds
   tools: java, spring boot, ruby, cucumber, rspec, serverspec
-  description: Cloud broker enables gov department to monitor and provision infrastructure. Maintained and extended the Java Cucumber / Selenium test suite, and the Ruby infrastructure ​test ​suite.
+  description: Cloud broker enables gov department to monitor and provision infrastructure. Maintained and extended the Java Cucumber and Selenium test suite, and the Ruby infrastructure ​test ​suite.
 
-  - name: ethical supply chain tracker
+- name: ethical supply chain tracker
   time: jul 15 - mar 16
   tagline: tracks audits on supply chains for large multinational organisations
   tools: java, cucumber, spring boot, mesos
