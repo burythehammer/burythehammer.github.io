@@ -1,8 +1,20 @@
-- name: ???
-  time: jul 15 - current
-  tagline: under nda
-  tools: ???
-  description: My current job is under NDA, so I can't talk about it! You can be assured it's very exciting.
+- name: major consultancy cloud inventory
+  time: jul 17 - current
+  tagline: infrastructure discovery & tracking service
+  tools: javascript, cucumber.js, node.js, mocha & chai, aws lambda, groovy
+  description: Consulting and advising the quality processes for a team delivering a cloud discovery platform, implemented in AWS lambda. Platform has the ability to track costs and implement policy across their cloud estate. Building unit, integration and acceptance tests. Modifying Jenkins pipelines in groovy.
+
+- name: government cloud broker
+  time: sept 16 - jan 17
+  tagline: maintaining infrastructure across multiple clouds
+  tools: java, spring boot, ruby, cucumber, rspec, serverspec
+  description: Cloud broker enables gov department to monitor and provision infrastructure. Maintained and extended the Java Cucumber / Selenium test suite, and the Ruby infrastructure ​test ​suite.
+
+  - name: ethical supply chain tracker
+  time: jul 15 - mar 16
+  tagline: tracks audits on supply chains for large multinational organisations
+  tools: java, cucumber, spring boot, mesos
+  description: Maintained and extended an acceptance test suite of a large scale microservices application. Test suite implemented with Java, Cucumber and Selenium. Covered both UI & API.
 
 - name: foosbot
   time: jul 15 - current
