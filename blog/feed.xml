@@ -22,11 +22,6 @@ layout:
 					<category>{{ tag | strip_html }}></category>
 				{% endfor %}
 				<description>{{ post.excerpt | strip_html }}</description>
-				<image>
-					<url>http://www.w3schools.com/images/logo.gif</url>
-					<title>{{ post.thumbnail.alt }}</title>
-					<link>{{ site.files_url }}/img/thumbnails/{{ post.thumbnail.link }}</link>
-				</image>
 				<content type="html">
 					{% if post.math %}
 						<b>Warning:</b> this post contains math blocks rendered with the
