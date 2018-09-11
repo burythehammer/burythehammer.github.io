@@ -22,15 +22,9 @@ layout:
 					<category>{{ tag | strip_html }}></category>
 				{% endfor %}
 				<description>{{ post.excerpt | strip_html }}</description>
-				<content type="html">
-					{% if post.math %}
-						<b>Warning:</b> this post contains math blocks rendered with the
-						<a href="http://www.mathjax.org/">MathJax</a> JavaScript library. If you're using an RSS reader or
-						otherwise have Javascript disabled, none of them will display, so you should instead read this article at
-						its <a href="{{ site.url }}{{ post.url }}">source</a>.
-					{% endif %}
+				<content:encoded type="html">
 					{{ post.content }}>
-				</content>
+				</content:encoded>
 				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
 				<link>{{ site.url }}{{ post.url }}</link>
 				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
