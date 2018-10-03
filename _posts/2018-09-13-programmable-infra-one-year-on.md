@@ -10,7 +10,7 @@ tags:
 
 It's been a year and a half since I started speaking out about testing programmable infrastructure. Lots has changed, but we've got so much further to go. 
 
-I've written about my thoughts for InfoQ here: [Testing Programmable Infrastructure: A year on](hhttps://www.infoq.com/articles/testing-programmable-infrastructure).
+I've written about my thoughts for InfoQ here: [Testing Programmable Infrastructure: A year on](https://www.infoq.com/articles/testing-programmable-infrastructure).
 
 Despite my testing programmable infrastructure talk still being relevant, I originally wrote it quite a long time ago. It makes me wince slightly when I have to give it, because my views have changed somewhat. I've learned a lot more about test strategy, and I've learned a lot more about infrastructure too. In fact, I'm currently working in a platform engineering team!
 
