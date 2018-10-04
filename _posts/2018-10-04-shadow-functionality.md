@@ -6,9 +6,7 @@ tags:
     - testing
 ---
 
-When making software, the process for making features is theoretically straightforward. You design the feature, it gets groomed, chopped up into tasks, and these tasks are implemented one at a time. The feature is then delivered. This process implies that all functionality of a system is deliberately designed. 
-
-However, this is not always the case. 
+When making software, the process for making features is theoretically straightforward. You design the feature, it's chopped up into tasks, and these tasks are implemented and the feature delivered. This process implies that all functionality of a system is deliberately designed. However, this is not always the case. 
 
 Some colleagues at a previous job were working on a shopfront for their clients. They discovered that there was a security vulnerability - raw javascript was allowed in some of the text boxes. This could be abused in all manner of ways, and was definitely not intended by the development team. However, when the devs proposed that this flaw be patched out, they received pushback from their users. The users actually used this flaw in the system to add extra functionality to their shopfronts. In fact, many shopfronts _relied_ on this customisation, despite it being unintended. So the devs were stuck between removing a security risk and maintaining current functionality in their system.
 
