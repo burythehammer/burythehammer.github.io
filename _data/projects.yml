@@ -1,5 +1,23 @@
+- name: cloud native banking platform
+  time: oct 18 - present
+  tagline: tooling / platform for major new banking platform
+  tools: kubernetes, docker, golang, jenkins, groovy, aws, terraform, linkerd
+  description: Working on the platform tooling team for a new banking platform. Improving and maintaining the platform for which all teams deploy their services, support teams to work effectively on the platform, and organizing teams to deploy major releases.
+
+- name: credit agency saas platform
+  time: jul 18 - oct 18
+  tagline: infrastructure for major new saas platform
+  tools: kafka, zookeeper, jenkins, aws, terraform
+  description: Working on the platform team for a household name credit agency and their new SaaS platform. Maintaining and extending the capabilities of the shared tooling that all teams used, such as Kafka and Jenkins.
+
+- name: ebay
+  time: mar 18 - jul 18
+  tagline: multinational e-commerce application
+  tools: java, spring, selenium, exploratory testing
+  description: Working as a test engineer on tier 2 application for one of the most popular websites in the world. Pairing with developers, and doing regular risk analysis and exploratory sessions to uncover new issues. Rebuilt their custom made web test automation framework into something implementing modern BDD/Specification by Example standards.
+
 - name: major consultancy cloud inventory
-  time: jul 17 - current
+  time: jul 17 - mar 18
   tagline: infrastructure discovery & tracking service
   tools: javascript, cucumber.js, node.js, mocha & chai, aws lambda, groovy
   description: Consulting and advising the quality processes for a team delivering a cloud discovery platform, implemented in AWS lambda. Platform has the ability to track costs and implement policy across their cloud estate. Building unit, integration and acceptance tests. Modifying Jenkins pipelines in groovy.
