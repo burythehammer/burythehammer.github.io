@@ -8,7 +8,7 @@ tags:
     - infrastructure
 ---
 
-It's been a year and a half since I started speaking out about testing programmable infrastructure. Lots has changed, but we've got so much further to go. 
+It's been a year and a half since I started speaking out about testing programmable infrastructure. Lots has changed, but we've got so much further to go.
 
 I've written about my thoughts for InfoQ here: [Testing Programmable Infrastructure: A year on](https://www.infoq.com/articles/testing-programmable-infrastructure).
 
