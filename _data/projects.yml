@@ -46,7 +46,7 @@
 
 - name: this website
   time: nov 15 - dec 15
-  url: http://www.burythehammer.com
+  url: https://www.burythehammer.com
   tagline: personal website
   tools: ruby, jekyll, sass, html
   description: Look around you! My personal portfolio and website. Graciously modified from http://sevko.io.
@@ -86,14 +86,14 @@
 
 - name: itv hub
   time: jan 15 - jul 15
-  url: http://www.itv.com
+  url: https://www.itv.com
   tagline: video on demand service
   tools: ruby, scala, cucumber, gatling, selenium, ruby
   description: performance and functional testing for the rebuild of itv's video on demand website.
 
 - name: usemango
   time: oct 13 - dec 14
-  url: http://www.usemango.co.uk
+  url: https://www.usemango.co.uk
   tagline: test tool and framework
   tools: vbscript, qtp, alm, .net
   description: An enterprise tool and testing framework for the HP software ecosystem.

@@ -4,7 +4,7 @@ https://keybase.io/burythehammer
 
 I hereby claim:
 
-  * I am an admin of http://www.burythehammer.com
+  * I am an admin of https://www.burythehammer.com
   * I am burythehammer (https://keybase.io/burythehammer) on keybase.
   * I have a public key with fingerprint CED0 B839 8DCC A533 DD41  6F43 2D8E E494 6923 26D0
 
