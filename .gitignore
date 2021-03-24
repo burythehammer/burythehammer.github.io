@@ -9,7 +9,7 @@
 .ruby-gemset
 .ruby-version
 .sass-cache
-Gemfile.lock
+.jekyll-cache
 _site/
 bbin/
 coverage
