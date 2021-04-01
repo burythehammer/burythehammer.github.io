@@ -1,8 +1,21 @@
-- name: cloud native banking platform
-  time: oct 18 - present
+- name: death in videogames
+  time: mar 21 - present
+  url: https://www.deathinvideogames.com
+  tagline: analysing the relationship between videogames and death
+  tools: jekyll, ruby, sass
+  description: A personal blog/essay project, which analyses a videogame at a time and how it treats the topic of death. This ranges from everything from the consequences of a player death, who and why does the player kill, and how deaths are treated from a narrative and thematic perspective.
+
+- name: toy manufacturer logistics
+  time: feb 21 - present
+  tagline: messaging and mapping hub
+  tools: aws, kubernetes, terraform, java, spring boot, github actions, argocd, helm
+  description: Working for a major international toy manufacturer on a new messaging and mapping hub for their distribution centres. Setting up the cloud infrastructure, pipelines and acceptance test suite from scratch.
+
+- name: cloud native banking platform (various)
+  time: oct 18 - dec 20
   tagline: tooling / platform for major new banking platform
-  tools: kubernetes, docker, golang, jenkins, groovy, aws, terraform, linkerd
-  description: Working on the platform tooling team for a new banking platform. Improving and maintaining the platform for which all teams deploy their services, support teams to work effectively on the platform, and organizing teams to deploy major releases.
+  tools: aws, kubernetes, terraform, golang, concourseci, jenkins, groovy, helm
+  description: Working on various platform tooling teams for a new banking platform. Improving and maintaining the platform for which all teams deploy their services, support teams to work effectively on the platform, and organizing teams to deploy major releases.
 
 - name: credit agency saas platform
   time: jul 18 - oct 18
@@ -35,7 +48,7 @@
   description: Maintained and extended an acceptance test suite of a large scale microservices application. Test suite implemented with Java, Cucumber and Selenium. Covered both UI & API.
 
 - name: foosbot
-  time: jul 15 - current
+  time: jul 15 - mar 18
   url: https://github.com/burythehammer/foosbot
   tagline: foosball ranking slack bot
   tools: python, theano, slack
@@ -65,7 +78,7 @@
     branch: master
 
 - name: acceptance test quickstart
-  time: nov 15 - current
+  time: nov 15 - present
   url: https://www.opencredo.com/2015/11/23/ruby-acceptance-testing-framework/
   tagline: web testing framework
   tools: ruby, cucumber, capybara, selenium
