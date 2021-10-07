@@ -99,7 +99,7 @@ DEPENDENCIES
   classifier-reborn
   jekyll
   json_resume
-  nokogiri
+  nokogiri (>= 1.12.5)
   webrick (~> 1.7)
 
 RUBY VERSION
