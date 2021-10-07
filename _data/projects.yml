@@ -1,3 +1,9 @@
+- name: global payment provider
+  time: sept 21 - present
+  tagline: test tooling and architecting
+  tools: java, iso20022, cucumber, rabbitmq,  performance tests
+  description: Writing test tooling for development and test teams, so that they may test the next version of an important global payments provider.
+
 - name: death in videogames
   time: mar 21 - present
   url: https://www.deathinvideogames.com
@@ -6,7 +12,7 @@
   description: A personal blog/essay project, which analyses a videogame at a time and how it treats the topic of death. This ranges from everything from the consequences of a player death, who and why does the player kill, and how deaths are treated from a narrative and thematic perspective.
 
 - name: toy manufacturer logistics
-  time: feb 21 - present
+  time: feb 21 - sept 21
   tagline: messaging and mapping hub
   tools: aws, kubernetes, terraform, java, spring boot, github actions, argocd, helm
   description: Working for a major international toy manufacturer on a new messaging and mapping hub for their distribution centres. Setting up the cloud infrastructure, pipelines and acceptance test suite from scratch.
