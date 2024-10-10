@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
-ruby '3.0.0'
+ruby '3.2.3'
 
-gem "nokogiri", ">= 1.12.5"
+gem 'nokogiri'
 gem 'jekyll'
 gem 'json_resume'
 gem 'classifier-reborn'
-
-gem "webrick", "~> 1.7"
+gem 'webrick'

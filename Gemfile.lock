@@ -1,31 +1,56 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.1)
-      public_suffix (>= 2.0.2, < 6.0)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
+    bigdecimal (3.1.8)
     classifier-reborn (2.3.0)
       fast-stemmer (~> 1.0)
       matrix (~> 0.4)
     colorator (1.1.0)
-    concurrent-ruby (1.2.2)
-    domain_name (0.5.20190701)
-      unf (>= 0.0.5, < 1.0.0)
+    concurrent-ruby (1.3.4)
+    domain_name (0.6.20240107)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
     fast-stemmer (1.0.2)
-    ffi (1.15.5)
+    ffi (1.17.0-aarch64-linux-gnu)
+    ffi (1.17.0-aarch64-linux-musl)
+    ffi (1.17.0-arm-linux-gnu)
+    ffi (1.17.0-arm-linux-musl)
+    ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0-x86-linux-gnu)
+    ffi (1.17.0-x86-linux-musl)
+    ffi (1.17.0-x86_64-darwin)
+    ffi (1.17.0-x86_64-linux-gnu)
+    ffi (1.17.0-x86_64-linux-musl)
     forwardable-extended (2.6.0)
-    google-protobuf (3.22.0-x86_64-darwin)
-    google-protobuf (3.22.0-x86_64-linux)
+    google-protobuf (4.28.2)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.28.2-aarch64-linux)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.28.2-arm64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.28.2-x86-linux)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.28.2-x86_64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.28.2-x86_64-linux)
+      bigdecimal
+      rake (>= 13)
     http-accept (1.7.0)
-    http-cookie (1.0.5)
+    http-cookie (1.0.7)
       domain_name (~> 0.5)
     http_parser.rb (0.8.0)
-    i18n (1.12.0)
+    i18n (1.14.6)
       concurrent-ruby (~> 1.0)
-    jekyll (4.3.2)
+    jekyll (4.3.4)
       addressable (~> 2.4)
       colorator (~> 1.0)
       em-websocket (~> 0.5)
@@ -57,63 +82,101 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     liquid (4.0.4)
-    listen (3.8.0)
+    listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.6.1)
     matrix (0.4.2)
     mercenary (0.4.0)
-    mime-types (3.4.1)
+    mime-types (3.6.0)
+      logger
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2023.0218.1)
+    mime-types-data (3.2024.1001)
     mustache (1.1.1)
     netrc (0.11.0)
-    nokogiri (1.14.3-x86_64-darwin)
+    nokogiri (1.16.7-aarch64-linux)
       racc (~> 1.4)
-    nokogiri (1.14.3-x86_64-linux)
+    nokogiri (1.16.7-arm-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.7-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.7-x86-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.7-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    pdfkit (0.8.7.2)
-    public_suffix (5.0.1)
-    racc (1.6.2)
+    pdfkit (0.8.7.3)
+    public_suffix (6.0.1)
+    racc (1.8.1)
+    rake (13.2.1)
     rb-fsevent (0.11.2)
-    rb-inotify (0.10.1)
+    rb-inotify (0.11.1)
       ffi (~> 1.0)
     rest-client (2.1.0)
       http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rexml (3.2.5)
-    rouge (4.1.0)
+    rexml (3.3.8)
+    rouge (4.4.0)
     safe_yaml (1.0.5)
-    sass-embedded (1.58.3-x86_64-darwin)
-      google-protobuf (~> 3.21)
-    sass-embedded (1.58.3-x86_64-linux-gnu)
-      google-protobuf (~> 3.21)
+    sass-embedded (1.79.4-aarch64-linux-gnu)
+      google-protobuf (~> 4.27)
+    sass-embedded (1.79.4-aarch64-linux-musl)
+      google-protobuf (~> 4.27)
+    sass-embedded (1.79.4-arm-linux-gnueabihf)
+      google-protobuf (~> 4.27)
+    sass-embedded (1.79.4-arm-linux-musleabihf)
+      google-protobuf (~> 4.27)
+    sass-embedded (1.79.4-arm64-darwin)
+      google-protobuf (~> 4.27)
+    sass-embedded (1.79.4-x86-linux-gnu)
+      google-protobuf (~> 4.27)
+    sass-embedded (1.79.4-x86-linux-musl)
+      google-protobuf (~> 4.27)
+    sass-embedded (1.79.4-x86_64-darwin)
+      google-protobuf (~> 4.27)
+    sass-embedded (1.79.4-x86_64-linux-gnu)
+      google-protobuf (~> 4.27)
+    sass-embedded (1.79.4-x86_64-linux-musl)
+      google-protobuf (~> 4.27)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
-    thor (1.2.1)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.8.2)
-    unicode-display_width (2.4.2)
-    webrick (1.8.1)
-    wkhtmltopdf-binary (0.12.6.6)
+    thor (1.3.2)
+    unicode-display_width (2.6.0)
+    webrick (1.8.2)
+    wkhtmltopdf-binary (0.12.6.8)
 
 PLATFORMS
-  x86_64-darwin-20
+  aarch64-linux
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux
+  arm-linux-gnu
+  arm-linux-gnueabihf
+  arm-linux-musl
+  arm-linux-musleabihf
+  arm64-darwin
+  x86-linux
+  x86-linux-gnu
+  x86-linux-musl
+  x86_64-darwin
   x86_64-linux
+  x86_64-linux-gnu
+  x86_64-linux-musl
 
 DEPENDENCIES
   classifier-reborn
   jekyll
   json_resume
-  nokogiri (>= 1.12.5)
-  webrick (~> 1.7)
+  nokogiri
+  webrick
 
 RUBY VERSION
-   ruby 3.0.0p0
+   ruby 3.2.3p157
 
 BUNDLED WITH
-   2.2.3
+   2.5.21
