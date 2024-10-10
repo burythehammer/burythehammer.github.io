@@ -5,11 +5,11 @@
  * $value : The value corresponding to the property `$property`.
  */
 @mixin vendor($property, $value)
-	-webkit-#{$property}: $value
-	-moz-#{$property}: $value
-	-ms-#{$property}: $value
-	-o-#{$property}: $value
-	#{$property}: $value
+    -webkit-#{$property}: $value
+    -moz-#{$property}: $value
+    -ms-#{$property}: $value
+    -o-#{$property}: $value
+    #{$property}: $value
 
 /*
  * Insert Fontspring bulletproof font statements.
@@ -19,12 +19,12 @@
  *      the font.
  */
 @mixin font($name)
-	$path: "../fonts/" + $name + "/" + $name
-	@font-face
-		font-family: $name
-		src: url($path)
-		src: url($path) format("embedded-opentype"), url($path + ".woff") format("truetype"), url($path + ".ttf") format("svg")
-		font-style: normal
+    $path: "../fonts/" + $name + "/" + $name
+    @font-face
+        font-family: $name
+        src: url($path)
+        src: url($path) format("embedded-opentype"), url($path + ".woff") format("truetype"), url($path + ".ttf") format("svg")
+        font-style: normal
 
 /*
  * Insert a CSS ease-out transition.
@@ -32,7 +32,7 @@
  * $time : The time the transition should last.
  */
 @mixin transition($time)
-	@include vendor(transition, all $time ease-out)
+    @include vendor(transition, all $time ease-out)
 
 /*
  * Add portable opacity styling.
@@ -40,8 +40,8 @@
  * $opacity : The desired opacity level.
  */
 @mixin opacity($opacity)
-	@include vendor(opacity, $opacity)
-	filter: alpha(opacity=$opacity)
+    @include vendor(opacity, $opacity)
+    filter: alpha(opacity=$opacity)
 
 .t3
-	@include transition(0.3s)
+    @include transition(0.3s)
