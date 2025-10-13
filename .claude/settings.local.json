@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(bundle update:*)",
+      "Bash(bundle install:*)",
+      "Bash(bundle exec:*)",
+      "Bash(bundle audit check:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
