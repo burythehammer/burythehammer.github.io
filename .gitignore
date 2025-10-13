@@ -19,3 +19,4 @@ site/_site/
 test/dest
 tmp/*
 .idea
+Gemfile.lock
