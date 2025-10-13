@@ -8,7 +8,6 @@ gem 'sass', '3.7.4'
 gem 'nokogiri'
 gem 'jekyll'
 gem 'github-pages', '~> 232', group: :jekyll_plugins
-
 gem 'webrick'
 
 # Optional: Additional plugins for development
