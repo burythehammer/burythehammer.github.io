@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 	<head>
 		<link rel="icon" href="data:,">
 		<title>
@@ -35,7 +35,7 @@
 
 		<!-- MathJax configuration. -->
 		{% if page.math %}
-			<script src="http://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,local/local">
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 			</script>
 			<script>
 				MathJax.Hub.Config({
@@ -56,13 +56,6 @@
 		</script>
 	</head>
 	<body>
-		<!--[if lt IE 7]>
-			<p>
-				You are using an <strong>outdated</strong> browser. Please
-				<a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-			</p>
-		<![endif]-->
-
 		<div id="main">
 			{% if page.title != "home" %}
 				{% include header.html %}
