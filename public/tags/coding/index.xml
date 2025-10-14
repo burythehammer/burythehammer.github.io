@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coding on bury the hammer</title>
-    <link>http://localhost:1313/tags/coding/</link>
+    <link>https://www.burythehammer.com/tags/coding/</link>
     <description>Recent content in Coding on bury the hammer</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 09 May 2017 12:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.burythehammer.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Testing a Spark Application</title>
-      <link>http://localhost:1313/blog/testing-a-spark-application/</link>
+      <link>https://www.burythehammer.com/blog/testing-a-spark-application/</link>
       <pubDate>Tue, 09 May 2017 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/testing-a-spark-application/</guid>
+      <guid>https://www.burythehammer.com/blog/testing-a-spark-application/</guid>
       <description>&lt;p&gt;Data engineering / analysis applications are just like any other software. You need to test them. But how?&lt;/p&gt;&#xA;&lt;p&gt;I wrote something over at the OpenCredo blog about &lt;a href=&#34;https://opencredo.com/spark-testing/&#34;&gt;Testing Spark&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;It covers a few different technologies, mostly focused around data engineering (Cassandra, Spark, Scala). The thrust of it is that you can test any kind of application. Particularly data processing applications, which traditionally aren&amp;rsquo;t built by software engineers, and don&amp;rsquo;t tend to be tested.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Programmable Infrastructure Needs Testing Too</title>
-      <link>http://localhost:1313/blog/programmable-infrastructure-needs-testing-too/</link>
+      <link>https://www.burythehammer.com/blog/programmable-infrastructure-needs-testing-too/</link>
       <pubDate>Mon, 20 Mar 2017 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/programmable-infrastructure-needs-testing-too/</guid>
+      <guid>https://www.burythehammer.com/blog/programmable-infrastructure-needs-testing-too/</guid>
       <description>&lt;p&gt;Programmable infrastructure is similar to software, and needs testing too.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve written a post over at the OpenCredo blog about &lt;a href=&#34;https://opencredo.com/programmable-infrastructure-needs-testing/&#34;&gt;Testing Programmable Infrastructure&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s the skinny:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Programmable infrastructure is similar to software, and needs testing too. In this article, I argue that I describe some of the unique challenges the industry faces in adopting infrastructure testing: both cultural and technical. I end by pointing out where we can go from here: we need to talk about it more, identify best practice, and improve our tooling.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How do I do cross browser testing?</title>
-      <link>http://localhost:1313/blog/how-do-i-do-cross-browser-testing/</link>
+      <link>https://www.burythehammer.com/blog/how-do-i-do-cross-browser-testing/</link>
       <pubDate>Thu, 16 Mar 2017 10:53:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/how-do-i-do-cross-browser-testing/</guid>
+      <guid>https://www.burythehammer.com/blog/how-do-i-do-cross-browser-testing/</guid>
       <description>&lt;p&gt;I worked on a project where we had to do this. I&amp;rsquo;d say that the problem is closely related to cross browser testing, as you care about mobile / tablet browsers.&lt;/p&gt;&#xA;&lt;p&gt;Doing this manually is not an option I would ever choose. Automation is going to really pay off, as these tests are very similar to one another but with a few tweaks, and your manual testers are going to get very bored doing them.&lt;/p&gt;</description>
     </item>
     <item>
       <title>What testing tools should I learn first?</title>
-      <link>http://localhost:1313/blog/what-testing-tools-should-i-learn-first/</link>
+      <link>https://www.burythehammer.com/blog/what-testing-tools-should-i-learn-first/</link>
       <pubDate>Mon, 13 Mar 2017 19:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/what-testing-tools-should-i-learn-first/</guid>
+      <guid>https://www.burythehammer.com/blog/what-testing-tools-should-i-learn-first/</guid>
       <description>&lt;p&gt;Selenium is pretty good, and regularly used. It&amp;rsquo;s definitely the industry standard for web tests. Avoid older proprietary tools (QTP/QC/UFT/Loadrunner) like the plague.&lt;/p&gt;&#xA;&lt;p&gt;Cucumber, if doing user facing tests, is probably the other tool you&amp;rsquo;ll see a lot. It&amp;rsquo;ll run your tests, great reporting, hooks into CI pretty nicely, and makes very readable tests. You can get it for C# (specflow), Ruby, Java, Go, and lots of other languages.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;d say it&amp;rsquo;s worth finding a nice assertions framework, too. I tend to code in Java, so I use AssertJ. For Ruby, there&amp;rsquo;s the RSpec Expect syntax which is nice.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Automated testing emails</title>
-      <link>http://localhost:1313/blog/automated-testing-emails/</link>
+      <link>https://www.burythehammer.com/blog/automated-testing-emails/</link>
       <pubDate>Tue, 29 Mar 2016 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/automated-testing-emails/</guid>
+      <guid>https://www.burythehammer.com/blog/automated-testing-emails/</guid>
       <description>&lt;p&gt;Acceptance test suites generally are used for UI and API testing. However, an application may, for example, send registration or expiration warning emails. Often, tests related to this are left to manual testing, instead of putting them into an automated test suite. So let&amp;rsquo;s automate them!&lt;/p&gt;&#xA;&lt;p&gt;This is a blog I wrote for the OpenCredo blog, and you can see it over here: &lt;a href=&#34;https://opencredo.com/automated-email-testing/&#34;&gt;Automated Email Testing&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fallout hacking minigame script</title>
-      <link>http://localhost:1313/blog/fallout-hacking-minigame-script/</link>
+      <link>https://www.burythehammer.com/blog/fallout-hacking-minigame-script/</link>
       <pubDate>Mon, 16 Nov 2015 23:30:50 +0000</pubDate>
-      <guid>http://localhost:1313/blog/fallout-hacking-minigame-script/</guid>
+      <guid>https://www.burythehammer.com/blog/fallout-hacking-minigame-script/</guid>
       <description>&lt;p&gt;The password cracking minigame on Fallout is so annoying, I made a little script to help you do it.&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s because I&amp;rsquo;ve been playing Fallout: New Vegas for the first time recently. Lots of my friends are playing Fallout 4, which I&amp;rsquo;m not all that excited by - but I thought I&amp;rsquo;d play New Vegas instead, because I really like Obsidian Entertainment. It may be mostly because one of their founders is Chris Avellone, who was the principal designer of &lt;a href=&#34;https://en.wikipedia.org/wiki/Planescape%3A_Torment&#34;&gt;Planescape Torment&lt;/a&gt;, one of my favourite games of all time.&lt;/p&gt;</description>
     </item>
   </channel>
