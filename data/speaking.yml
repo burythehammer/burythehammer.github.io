@@ -1,0 +1,39 @@
+- event: Testbash Brighton 2018
+  location: The Clarendon Centre, Brighton
+  date: 16th March 2018
+  url: https://dojo.ministryoftesting.com/events/testbash-brighton-2018
+  talk: Why We Should Test Programmable Infrastructure
+
+- event: muCon 2017
+  location: Codenode, London
+  date: 7th November 2017
+  url: https://skillsmatter.com/conferences/8549-con-2017-the-microservices-conference#program
+  talk: Testing Programmable Infrastructure
+
+
+- event: Agile Cambridge 2017
+  location: Churchill College, Cambridge
+  date: 29th September 2017
+  url: http://agilecambridge.net/2017/sessions/index.php?session=27
+  talk: Testing Programmable Infrastructure
+
+
+- event: QCon 2017
+  location: QEII Conference Centre, London
+  date: 7th March 2017
+  url: https://www.infoq.com/presentations/opencredo-ruby
+  talk: Testing Programmable Infrastructure
+
+
+- event: Community For Agile Testers
+  location: MOO, London
+  date: Feb 16th, 2017
+  url: https://www.meetup.com/Community-for-Agile-Testing/events/236792992/
+  talk: Testing Programmable Infrastructure
+
+
+- event: London Hashicorp User Group
+  location: Space Ape Games, London
+  date: Feb 15th, 2017
+  url: https://www.meetup.com/London-HashiCorp-User-Group/events/229988633/
+  talk: Testing Programmable Infrastructure

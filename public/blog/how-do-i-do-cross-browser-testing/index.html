@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+		<link rel="icon" href="data:,">
+		<title>
+			How do I do cross browser testing? | bury the hammer
+		</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="initial-scale=1">
+
+		<style>
+			div#header li#How do I do cross browser testing? a {
+				color: #ffffff;
+				font-weight: bold;
+			}
+		</style>
+
+		
+		
+		<link rel="stylesheet" type="text/css" href="/sass/main.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+
+		
+		
+		
+			
+			
+			<link rel="stylesheet" type="text/css" href="/sass/header.min.css">
+		
+		
+
+		
+		
+
+		
+
+		
+		<script>
+			console.log("_   /|\n\\'o.O'\n=(___)=\n   U\n\nHey there.");
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			
+				<div id="header">
+	<h2 id="maintitle">bury the hammer</h2>
+	<ul>
+		<li id="about"><a href="/">about</a></li>
+		<li id="projects"><a href="/projects">projects</a></li>
+		<li id="speaking"><a href="/speaking">speaking</a></li>
+		<li id="blog"><a href="/blog">blog</a></li>
+		<li id="cv"><a href="/cv/CV.pdf">cv</a></li>
+		<li id="contact"><a href="mailto:matt@burythehammer.com">contact</a></li>
+	</ul>
+</div>
+
+			
+			
+<div id="meta">
+	<h1>How do I do cross browser testing?</h1>
+	<span>March 16, 2017</span>
+	
+	<div id="tags">
+		<span>tags:</span>
+		
+		
+			
+				
+					<a href="/blog/tags#testing">testing</a>,
+				
+			
+				
+					<a href="/blog/tags#coding">coding</a>
+				
+			
+		
+	</div>
+	
+</div>
+
+<div id="post">
+	
+		<p>I worked on a project where we had to do this. I&rsquo;d say that the problem is closely related to cross browser testing, as you care about mobile / tablet browsers.</p>
+<p>Doing this manually is not an option I would ever choose. Automation is going to really pay off, as these tests are very similar to one another but with a few tweaks, and your manual testers are going to get very bored doing them.</p>
+<p>First off, you can use tools like Browserstack or Sauce Labs to simulate mobile phone/tablet browsers. It&rsquo;ll be a lot cheaper using those than maintaining lots of different browsers yourself.</p>
+<p>We defined our test cases into three different form factors - desktop, tablet, and phone. The responsive design changed at certain resolution boundaries. So we did functional tests at all three main resolutions. We changed the browser resolution, and ran our standard functional suite against them.</p>
+<p>I&rsquo;d use techniques like a browser matrix and identify your most important audiences that you want to target. If you currently have a live website, grab the details from Google Analytics (or similar) and work out what you care about. Perhaps few people visit your website on a tablet, so you care less about it&hellip;?</p>
+<p>How often you want to do this is really up to you. I&rsquo;d probably do a normal functional suite every deploy to QA, and then more irregularly (perhaps every release candidate) do a full cross browser &amp; responsive test. As far as the testing pyramid is concerned, resolution &amp; cross browser testing is higher up than the acceptance suite - it takes much longer and you&rsquo;re not going to discover as many critical bugs.</p>
+
+	
+</div>
+
+
+
+		</div>
+
+	</body>
+</html>

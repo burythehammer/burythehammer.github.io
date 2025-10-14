@@ -1,0 +1,30 @@
+<li class="post">
+	<div class="meta">
+		<div class="text">
+			<a class="blog-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+			<span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+			{{ if .Params.tags }}
+			<div class="tags">
+				<span>tags:</span>
+				{{ $tags := .Params.tags }}
+				{{ if not (reflect.IsSlice $tags) }}
+					<a href="/blog/tags#{{ $tags }}">{{ $tags }}</a>
+				{{ else }}
+					{{ range $index, $tag := $tags }}
+						{{ if ne $index (sub (len $tags) 1) }}
+							<a href="/blog/tags#{{ $tag }}">{{ $tag }}</a>,
+						{{ else }}
+							<a href="/blog/tags#{{ $tag }}">{{ $tag }}</a>
+						{{ end }}
+					{{ end }}
+				{{ end }}
+			</div>
+			{{ end }}
+		</div>
+		<div class="summary">{{ .Description }}</div>
+	</div>
+
+	<div class="excerpt">
+		{{ .Summary }}
+	</div>
+</li>

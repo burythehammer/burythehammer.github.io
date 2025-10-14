@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opencredo on bury the hammer</title>
+    <link>http://localhost:1313/tags/opencredo/</link>
+    <description>Recent content in Opencredo on bury the hammer</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 May 2017 12:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/opencredo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing a Spark Application</title>
+      <link>http://localhost:1313/blog/testing-a-spark-application/</link>
+      <pubDate>Tue, 09 May 2017 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/testing-a-spark-application/</guid>
+      <description>&lt;p&gt;Data engineering / analysis applications are just like any other software. You need to test them. But how?&lt;/p&gt;&#xA;&lt;p&gt;I wrote something over at the OpenCredo blog about &lt;a href=&#34;https://opencredo.com/spark-testing/&#34;&gt;Testing Spark&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;It covers a few different technologies, mostly focused around data engineering (Cassandra, Spark, Scala). The thrust of it is that you can test any kind of application. Particularly data processing applications, which traditionally aren&amp;rsquo;t built by software engineers, and don&amp;rsquo;t tend to be tested.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Programmable Infrastructure Needs Testing Too</title>
+      <link>http://localhost:1313/blog/programmable-infrastructure-needs-testing-too/</link>
+      <pubDate>Mon, 20 Mar 2017 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/programmable-infrastructure-needs-testing-too/</guid>
+      <description>&lt;p&gt;Programmable infrastructure is similar to software, and needs testing too.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve written a post over at the OpenCredo blog about &lt;a href=&#34;https://opencredo.com/programmable-infrastructure-needs-testing/&#34;&gt;Testing Programmable Infrastructure&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s the skinny:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Programmable infrastructure is similar to software, and needs testing too. In this article, I argue that I describe some of the unique challenges the industry faces in adopting infrastructure testing: both cultural and technical. I end by pointing out where we can go from here: we need to talk about it more, identify best practice, and improve our tooling.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>You Are Ignoring Non-functional Testing</title>
+      <link>http://localhost:1313/blog/you-are-ignoring-non-functional-testing/</link>
+      <pubDate>Wed, 15 Jun 2016 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/you-are-ignoring-non-functional-testing/</guid>
+      <description>&lt;p&gt;Testing is always focused on functional testing. Non-functional testing, by comparison, is treated like a second class citizen. This means that functional requirements get refined, and non-functional requirements are ignored until the very end.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve written a &lt;a href=&#34;https://opencredo.com/ignoring-non%C2%ADfunctional-testing/&#34;&gt;blog&lt;/a&gt; over at OpenCredo about this.&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s enormously frustrating. I&amp;rsquo;m a QA Consultant, allegedly, but spend most of my time on functional requirements. If anything, quality depends on everything aside from what your application does. How easy is it to use? Do your users enjoy using your application? Is it better than your competition? These things always get pushed to the side!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automated testing emails</title>
+      <link>http://localhost:1313/blog/automated-testing-emails/</link>
+      <pubDate>Tue, 29 Mar 2016 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/automated-testing-emails/</guid>
+      <description>&lt;p&gt;Acceptance test suites generally are used for UI and API testing. However, an application may, for example, send registration or expiration warning emails. Often, tests related to this are left to manual testing, instead of putting them into an automated test suite. So let&amp;rsquo;s automate them!&lt;/p&gt;&#xA;&lt;p&gt;This is a blog I wrote for the OpenCredo blog, and you can see it over here: &lt;a href=&#34;https://opencredo.com/automated-email-testing/&#34;&gt;Automated Email Testing&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

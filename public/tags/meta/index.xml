@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meta on bury the hammer</title>
+    <link>http://localhost:1313/tags/meta/</link>
+    <description>Recent content in Meta on bury the hammer</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Oct 2015 23:09:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/meta/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Beginnings</title>
+      <link>http://localhost:1313/blog/new-beginnings/</link>
+      <pubDate>Sun, 04 Oct 2015 23:09:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/new-beginnings/</guid>
+      <description>&lt;p&gt;In a last ditch effort to attempt to be professional about something, I&amp;rsquo;ve relaunched this blog.&lt;/p&gt;&#xA;&lt;p&gt;Originally this was a blog about music, specifically indiepop music, with a focus on gigs. With a bit of photography thrown in. My aims with this relaunch are somewhat more professionally oriented (I work in tech, but more on that later), but there&amp;rsquo;ll probably be plenty of personal stuff on here too.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve chosen to move the tech stack of the blog to be something far cleaner and more lightweight. I&amp;rsquo;m no big fan of Wordpress, so I&amp;rsquo;ve decided to move to &lt;a href=&#34;http://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; instead, hosted on the delightful &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt;. This has a number of advantages, but it&amp;rsquo;s mostly just super easy to maintain, is very customisable, and is extremely minimal. This is a personal blog, not an all singing, all dancing corporate website.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

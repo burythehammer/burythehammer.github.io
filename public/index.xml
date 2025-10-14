@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>about on bury the hammer</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in about on bury the hammer</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Sep 2020 18:30:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Test Strategy</title>
+      <link>http://localhost:1313/blog/on-test-strategy/</link>
+      <pubDate>Wed, 30 Sep 2020 18:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/on-test-strategy/</guid>
+      <description>&lt;p&gt;The test strategy of any organisation or department should be focused on one thing: measuring the quality of the application. This is so the business can make informed decisions regarding the application - not just with respect to an immediate release, but future development, communication, or any other business activity.&lt;/p&gt;&#xA;&lt;p&gt;This definition may sound surprising to many in software development. The industry norm is to see testing as a gatekeeper function. Testing is often relegated to simple functional tasks, an exercise in ticking boxes. This doesn’t even perform a good gatekeeping function - it tells you very little about the quality of the software. This approach merely ensures that the software can execute some basic tasks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Shadow Functionality</title>
+      <link>http://localhost:1313/blog/shadow-functionality/</link>
+      <pubDate>Thu, 04 Oct 2018 12:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/shadow-functionality/</guid>
+      <description>&lt;p&gt;When making software, the process for making features is theoretically straightforward. You design the feature, it&amp;rsquo;s chopped up into tasks, and these tasks are implemented and the feature delivered. This process implies that all functionality of a system is deliberately designed. However, this is not always the case.&lt;/p&gt;&#xA;&lt;p&gt;Some colleagues at a previous job were working on a shopfront for their clients. They discovered that there was a security vulnerability - raw javascript was allowed in some of the text boxes. This could be abused in all manner of ways, and was definitely not intended by the development team. However, when the devs proposed that this flaw be patched out, they received pushback from their users. The users actually used this flaw in the system to add extra functionality to their shopfronts. In fact, many shopfronts &lt;em&gt;relied&lt;/em&gt; on this customisation, despite it being unintended. So the devs were stuck between removing a security risk and maintaining current functionality in their system.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Testing Programmable Infrastructure: a year on</title>
+      <link>http://localhost:1313/blog/testing-programmable-infrastructure-a-year-on/</link>
+      <pubDate>Thu, 13 Sep 2018 09:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/testing-programmable-infrastructure-a-year-on/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been a year and a half since I started speaking out about testing programmable infrastructure. Lots has changed, but we&amp;rsquo;ve got so much further to go.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve written about my thoughts for InfoQ here: &lt;a href=&#34;https://www.infoq.com/articles/testing-programmable-infrastructure&#34;&gt;Testing Programmable Infrastructure: A year on&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Despite my testing programmable infrastructure talk still being relevant, I originally wrote it quite a long time ago. It makes me wince slightly when I have to give it, because my views have changed somewhat. I&amp;rsquo;ve learned a lot more about test strategy, and I&amp;rsquo;ve learned a lot more about infrastructure too. In fact, I&amp;rsquo;m currently working in a platform engineering team!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Testbash slides</title>
+      <link>http://localhost:1313/blog/testbash-slides/</link>
+      <pubDate>Thu, 22 Mar 2018 17:06:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/testbash-slides/</guid>
+      <description>&lt;p&gt;I recently was lucky enough to speak at Testbash Brighton last week - and had a whale of a time meeting everyone, new and old. It&amp;rsquo;s genuinely crazy to me that I&amp;rsquo;m talking to 400-500 ish people and taken as seriously as someone like &lt;a href=&#34;http://angryweasel.com/blog/about-alan/&#34;&gt;Alan Page&lt;/a&gt;. Are you guys nuts?&lt;/p&gt;&#xA;&lt;p&gt;Anyway, I&amp;rsquo;ve uploaded my slides for the talk &amp;ldquo;Why we should test programmable infrastructure&amp;rdquo; &lt;a href=&#34;https://s3.amazonaws.com/matt-public-sharing/Why+we+should+test+programmable+infrastructure+testbash.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re a member of the &lt;a href=&#34;https://dojo.ministryoftesting.com/&#34;&gt;Ministry of Testing dojo&lt;/a&gt; you can also watch the talk online. I believe it&amp;rsquo;s also available to anyone who attended TestBash. It should be available Soon™.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Testing a Spark Application</title>
+      <link>http://localhost:1313/blog/testing-a-spark-application/</link>
+      <pubDate>Tue, 09 May 2017 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/testing-a-spark-application/</guid>
+      <description>&lt;p&gt;Data engineering / analysis applications are just like any other software. You need to test them. But how?&lt;/p&gt;&#xA;&lt;p&gt;I wrote something over at the OpenCredo blog about &lt;a href=&#34;https://opencredo.com/spark-testing/&#34;&gt;Testing Spark&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;It covers a few different technologies, mostly focused around data engineering (Cassandra, Spark, Scala). The thrust of it is that you can test any kind of application. Particularly data processing applications, which traditionally aren&amp;rsquo;t built by software engineers, and don&amp;rsquo;t tend to be tested.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Programmable Infrastructure Needs Testing Too</title>
+      <link>http://localhost:1313/blog/programmable-infrastructure-needs-testing-too/</link>
+      <pubDate>Mon, 20 Mar 2017 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/programmable-infrastructure-needs-testing-too/</guid>
+      <description>&lt;p&gt;Programmable infrastructure is similar to software, and needs testing too.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve written a post over at the OpenCredo blog about &lt;a href=&#34;https://opencredo.com/programmable-infrastructure-needs-testing/&#34;&gt;Testing Programmable Infrastructure&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s the skinny:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Programmable infrastructure is similar to software, and needs testing too. In this article, I argue that I describe some of the unique challenges the industry faces in adopting infrastructure testing: both cultural and technical. I end by pointing out where we can go from here: we need to talk about it more, identify best practice, and improve our tooling.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Are software testing certifications worth it?</title>
+      <link>http://localhost:1313/blog/are-software-testing-certifications-worth-it/</link>
+      <pubDate>Thu, 16 Mar 2017 10:53:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/are-software-testing-certifications-worth-it/</guid>
+      <description>&lt;p&gt;In principle, they could be. In practice, no.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve done the ISTQB foundation. It was a case in memorising useless terminology and methodology that is at best outdated, and at worst completely irrelevant. It also seemed to see iterative development and automation as &amp;lsquo;incredibly advanced&amp;rsquo; (sigh) topics, which IMO does more damage to the industry than helps it.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m thankfully at the point in my career where I have plenty of options available to me, but frankly, any job that requires me to have arbitrary useless qualifications is a warning sign more than an opportunity. If they don&amp;rsquo;t put any thought into their interview criteria, what makes you think they put any thought into their software, or you once you join?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How do I do cross browser testing?</title>
+      <link>http://localhost:1313/blog/how-do-i-do-cross-browser-testing/</link>
+      <pubDate>Thu, 16 Mar 2017 10:53:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/how-do-i-do-cross-browser-testing/</guid>
+      <description>&lt;p&gt;I worked on a project where we had to do this. I&amp;rsquo;d say that the problem is closely related to cross browser testing, as you care about mobile / tablet browsers.&lt;/p&gt;&#xA;&lt;p&gt;Doing this manually is not an option I would ever choose. Automation is going to really pay off, as these tests are very similar to one another but with a few tweaks, and your manual testers are going to get very bored doing them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What testing tools should I learn first?</title>
+      <link>http://localhost:1313/blog/what-testing-tools-should-i-learn-first/</link>
+      <pubDate>Mon, 13 Mar 2017 19:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/what-testing-tools-should-i-learn-first/</guid>
+      <description>&lt;p&gt;Selenium is pretty good, and regularly used. It&amp;rsquo;s definitely the industry standard for web tests. Avoid older proprietary tools (QTP/QC/UFT/Loadrunner) like the plague.&lt;/p&gt;&#xA;&lt;p&gt;Cucumber, if doing user facing tests, is probably the other tool you&amp;rsquo;ll see a lot. It&amp;rsquo;ll run your tests, great reporting, hooks into CI pretty nicely, and makes very readable tests. You can get it for C# (specflow), Ruby, Java, Go, and lots of other languages.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;d say it&amp;rsquo;s worth finding a nice assertions framework, too. I tend to code in Java, so I use AssertJ. For Ruby, there&amp;rsquo;s the RSpec Expect syntax which is nice.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zelda: Link&#39;s Awakening</title>
+      <link>http://localhost:1313/blog/zelda-links-awakening/</link>
+      <pubDate>Tue, 14 Feb 2017 12:14:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/zelda-links-awakening/</guid>
+      <description>&lt;p&gt;Zelda has a tradition of having a main game followed by a weird offshoot. The main game will talk about the Triforce, defeating Ganon, et cetera. The weird offshoot generally does whatever it likes. Link&amp;rsquo;s Awakening is the first weird offshoot in the series.&lt;/p&gt;&#xA;&lt;p&gt;Unless you count Zelda II, which is more bad than weird.&lt;/p&gt;&#xA;&lt;p&gt;Link&amp;rsquo;s Awakening actually has an interesting plot, for one. You collect the macguffins, you beat the final boss. But everything has this dreamy, surreal Twin Peaks vibe. There’s a dungeon themed around a face (?!). There&amp;rsquo;s an existential plot twist. There are.. Mario references everywhere.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zelda: A Link to the Past</title>
+      <link>http://localhost:1313/blog/zelda-a-link-to-the-past/</link>
+      <pubDate>Tue, 07 Feb 2017 23:15:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/zelda-a-link-to-the-past/</guid>
+      <description>&lt;p&gt;Unlike the previous Zelda games, I have a history with Link to the Past. When my parents relented and bought me a second hand SNES, it came with a few games - one was LTTP. Out of all the games I had, it was my favourite, and I played it a LOT. Replaying it as an adult brings back very specific memories.&lt;/p&gt;&#xA;&lt;p&gt;Out of Zelda or Zelda II, it’s clear that Nintendo saw that the first was the template to follow. This game uses the template of the first Zelda and improves every single facet. The 16 bit pixel art is BEAUTIFUL. Hyrule is finally a fleshed out world, full of character. The map &lt;em&gt;feels&lt;/em&gt; like a condensed world with distinct areas, and tells a story by itself. Dungeons are intricate and clever, and have overarching themes and puzzles. Exploration is always rewarded, and heaps of fun.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Zelda II: The Adventure of Link</title>
+      <link>http://localhost:1313/blog/zelda-ii-the-adventure-of-link/</link>
+      <pubDate>Thu, 02 Feb 2017 11:15:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/zelda-ii-the-adventure-of-link/</guid>
+      <description>&lt;p&gt;Zelda 2 is pretty famous for being the worst Zelda. It’s also famous for being obnoxiously hard.&lt;/p&gt;&#xA;&lt;p&gt;Obnoxious is probably the right word, too. This isn’t Dark Souls style “tough but fair” masochism, this is straight up unfairness. One enemy, the iron knuckle, will probably kill you from full health unless you use an obscure technique to attack them.&lt;/p&gt;&#xA;&lt;p&gt;Because Zelda 2 was only the second in the series, they decided to drastically depart from the formula laid down in the first one - much like how Super Mario Bros. 2 outside Japan is very different. Zelda 2 has a lives system, combat is side scrolling, there’s an overhead world map, random encounters, and an XP/levelling system. None of these have ever been seen since.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Legend of Zelda</title>
+      <link>http://localhost:1313/blog/the-legend-of-zelda/</link>
+      <pubDate>Fri, 20 Jan 2017 00:28:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/the-legend-of-zelda/</guid>
+      <description>&lt;p&gt;I’ve decided to do something a bit weird, which is play through all the Zelda games. In er, order. And write about them as I go.&lt;/p&gt;&#xA;&lt;p&gt;Which means the first one is Legend of Zelda, for the NES.&lt;/p&gt;&#xA;&lt;p&gt;Legend of Zelda is surprisingly like Dark Souls: zero help, high difficulty, full of secrets. It is nowhere near as fair, though. Nintendo’s idea of difficulty towards the end often involves putting lots of enemies in a room. Blue darknuts and wizzrobes are particularly aggravating. The worst of all is the Like Like, though. If one touches you, you lose your upgraded shield permanently. It costs 130 rupees to replace. In future games you’d get back your shield as soon as you defeat it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Darkest Dungeon impressions</title>
+      <link>http://localhost:1313/blog/darkest-dungeon-impressions/</link>
+      <pubDate>Tue, 27 Dec 2016 17:31:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/darkest-dungeon-impressions/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://store.steampowered.com/app/262060/&#34;&gt;Darkest Dungeon&lt;/a&gt; is a mission based dungeon crawler with heavy RPG elements. Screenshots don’t really do it justice, apart from making it look it’s going to be bloody hard. And to be fair, visuals aren’t Darkest Dungeon’s greatest asset. It’s very hard to tell how good it is from looks alone.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/G2OGzUy.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Darkest Dungeon is cruel at first. It looks like a standard dungeon crawler: but if you try and play it like one, it’ll tear you apart. In a game like XCOM, which also has the “send people out on missions” structure, losing a mission is catastrophic and so is letting characters die. In Darkest Dungeon, they literally could not give a shit about your characters. New characters gain quirks, good and bad, with frightening randomness. That guy you spent thousands on could turn out to have really had problems a few quests down the road. It’s probably worth ditching them.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On leaving home</title>
+      <link>http://localhost:1313/blog/on-leaving-home/</link>
+      <pubDate>Thu, 08 Sep 2016 13:43:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/on-leaving-home/</guid>
+      <description>&lt;p&gt;After four years, I&amp;rsquo;m leaving Haringey.&lt;/p&gt;&#xA;&lt;p&gt;I don&amp;rsquo;t know what I&amp;rsquo;ll miss more. Maybe the attentive but racist and sexist landlord. Maybe the constant creeping of mould. Then there&amp;rsquo;s the gross avocado-coloured bathroom fittings.&lt;/p&gt;&#xA;&lt;p&gt;When I moved in, I was just starting a new career. I&amp;rsquo;d just started dating someone new after a horrific breakup. And I&amp;rsquo;d been living with less than ideal people - mostly randomers. It was a fresh start - exciting and liberating.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>You Are Ignoring Non-functional Testing</title>
+      <link>http://localhost:1313/blog/you-are-ignoring-non-functional-testing/</link>
+      <pubDate>Wed, 15 Jun 2016 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/you-are-ignoring-non-functional-testing/</guid>
+      <description>&lt;p&gt;Testing is always focused on functional testing. Non-functional testing, by comparison, is treated like a second class citizen. This means that functional requirements get refined, and non-functional requirements are ignored until the very end.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve written a &lt;a href=&#34;https://opencredo.com/ignoring-non%C2%ADfunctional-testing/&#34;&gt;blog&lt;/a&gt; over at OpenCredo about this.&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s enormously frustrating. I&amp;rsquo;m a QA Consultant, allegedly, but spend most of my time on functional requirements. If anything, quality depends on everything aside from what your application does. How easy is it to use? Do your users enjoy using your application? Is it better than your competition? These things always get pushed to the side!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automated testing emails</title>
+      <link>http://localhost:1313/blog/automated-testing-emails/</link>
+      <pubDate>Tue, 29 Mar 2016 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/automated-testing-emails/</guid>
+      <description>&lt;p&gt;Acceptance test suites generally are used for UI and API testing. However, an application may, for example, send registration or expiration warning emails. Often, tests related to this are left to manual testing, instead of putting them into an automated test suite. So let&amp;rsquo;s automate them!&lt;/p&gt;&#xA;&lt;p&gt;This is a blog I wrote for the OpenCredo blog, and you can see it over here: &lt;a href=&#34;https://opencredo.com/automated-email-testing/&#34;&gt;Automated Email Testing&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My favourite albums of 2015</title>
+      <link>http://localhost:1313/blog/my-favourite-albums-of-2015/</link>
+      <pubDate>Mon, 28 Dec 2015 15:57:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/my-favourite-albums-of-2015/</guid>
+      <description>&lt;p&gt;I always used to write about music, but I stopped (reasons: complicated). I&amp;rsquo;m going to write a bit here about what I liked this year, though. I&amp;rsquo;m not pretending to be comprehensive. Or even that knowledgeable. But I know what I&amp;rsquo;ve enjoyed.&lt;/p&gt;&#xA;&lt;br/&gt;&#xA;&lt;h2 id=&#34;grimes---art-angels&#34;&gt;Grimes - Art Angels&lt;/h2&gt;&#xA;&lt;p&gt;Grimes has taken her quirky brand of experimental pop and made it mainstream. I literally cannot stop listening to it. It&amp;rsquo;s catchy, it&amp;rsquo;s quirky, it&amp;rsquo;s danceable - pop at its very best. The kind of album I find myself dancing to, late at night, drunk. There are so many great songs on here, it&amp;rsquo;s hard to know where to start. &lt;em&gt;Butterfly&lt;/em&gt; and &lt;em&gt;Realiti&lt;/em&gt; are my picks, but I could listen to any song. It&amp;rsquo;s great. So great.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fallout hacking minigame script</title>
+      <link>http://localhost:1313/blog/fallout-hacking-minigame-script/</link>
+      <pubDate>Mon, 16 Nov 2015 23:30:50 +0000</pubDate>
+      <guid>http://localhost:1313/blog/fallout-hacking-minigame-script/</guid>
+      <description>&lt;p&gt;The password cracking minigame on Fallout is so annoying, I made a little script to help you do it.&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s because I&amp;rsquo;ve been playing Fallout: New Vegas for the first time recently. Lots of my friends are playing Fallout 4, which I&amp;rsquo;m not all that excited by - but I thought I&amp;rsquo;d play New Vegas instead, because I really like Obsidian Entertainment. It may be mostly because one of their founders is Chris Avellone, who was the principal designer of &lt;a href=&#34;https://en.wikipedia.org/wiki/Planescape%3A_Torment&#34;&gt;Planescape Torment&lt;/a&gt;, one of my favourite games of all time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>New Beginnings</title>
+      <link>http://localhost:1313/blog/new-beginnings/</link>
+      <pubDate>Sun, 04 Oct 2015 23:09:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/new-beginnings/</guid>
+      <description>&lt;p&gt;In a last ditch effort to attempt to be professional about something, I&amp;rsquo;ve relaunched this blog.&lt;/p&gt;&#xA;&lt;p&gt;Originally this was a blog about music, specifically indiepop music, with a focus on gigs. With a bit of photography thrown in. My aims with this relaunch are somewhat more professionally oriented (I work in tech, but more on that later), but there&amp;rsquo;ll probably be plenty of personal stuff on here too.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve chosen to move the tech stack of the blog to be something far cleaner and more lightweight. I&amp;rsquo;m no big fan of Wordpress, so I&amp;rsquo;ve decided to move to &lt;a href=&#34;http://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; instead, hosted on the delightful &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github Pages&lt;/a&gt;. This has a number of advantages, but it&amp;rsquo;s mostly just super easy to maintain, is very customisable, and is extremely minimal. This is a personal blog, not an all singing, all dancing corporate website.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
