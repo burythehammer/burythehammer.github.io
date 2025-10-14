@@ -1,0 +1,11 @@
+{{ define "main" }}
+<a href="/blog/feed.xml">[RSS]</a>
+
+<ul id="posts">
+	{{ range .Site.RegularPages.ByDate.Reverse }}
+		{{ if eq .Section "blog" }}
+			{{ partial "post_summary.html" . }}
+		{{ end }}
+	{{ end }}
+</ul>
+{{ end }}

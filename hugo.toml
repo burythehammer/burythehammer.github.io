@@ -1,0 +1,39 @@
+baseURL = 'https://www.burythehammer.com'
+languageCode = 'en-us'
+title = 'bury the hammer'
+
+[params]
+  name = "Matt Long"
+  description = "Matt Long's homepage"
+
+[permalinks]
+  blog = '/blog/:title'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    endLevel = 2
+    ordered = false
+    startLevel = 1
+
+[taxonomies]
+  tag = 'tags'
+
+[module]
+  [[module.mounts]]
+    source = 'assets/sass'
+    target = 'assets/sass'
+  [[module.mounts]]
+    source = 'static'
+    target = 'static'
+  [[module.mounts]]
+    source = 'layouts'
+    target = 'layouts'
+  [[module.mounts]]
+    source = 'content'
+    target = 'content'
+  [[module.mounts]]
+    source = 'data'
+    target = 'data'

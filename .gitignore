@@ -11,6 +11,8 @@
 .sass-cache
 .jekyll-cache
 _site/
+public/
+resources/
 bbin/
 coverage
 gh-pages/
@@ -20,3 +22,5 @@ test/dest
 tmp/*
 .idea
 Gemfile.lock
+.claude
+.hugo_build.lock

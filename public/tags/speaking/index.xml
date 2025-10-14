@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Speaking on bury the hammer</title>
+    <link>https://www.burythehammer.com/tags/speaking/</link>
+    <description>Recent content in Speaking on bury the hammer</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Mar 2018 17:06:00 +0000</lastBuildDate>
+    <atom:link href="https://www.burythehammer.com/tags/speaking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testbash slides</title>
+      <link>https://www.burythehammer.com/blog/testbash-slides/</link>
+      <pubDate>Thu, 22 Mar 2018 17:06:00 +0000</pubDate>
+      <guid>https://www.burythehammer.com/blog/testbash-slides/</guid>
+      <description>&lt;p&gt;I recently was lucky enough to speak at Testbash Brighton last week - and had a whale of a time meeting everyone, new and old. It&amp;rsquo;s genuinely crazy to me that I&amp;rsquo;m talking to 400-500 ish people and taken as seriously as someone like &lt;a href=&#34;http://angryweasel.com/blog/about-alan/&#34;&gt;Alan Page&lt;/a&gt;. Are you guys nuts?&lt;/p&gt;&#xA;&lt;p&gt;Anyway, I&amp;rsquo;ve uploaded my slides for the talk &amp;ldquo;Why we should test programmable infrastructure&amp;rdquo; &lt;a href=&#34;https://s3.amazonaws.com/matt-public-sharing/Why+we+should+test+programmable+infrastructure+testbash.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re a member of the &lt;a href=&#34;https://dojo.ministryoftesting.com/&#34;&gt;Ministry of Testing dojo&lt;/a&gt; you can also watch the talk online. I believe it&amp;rsquo;s also available to anyone who attended TestBash. It should be available Soon™.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

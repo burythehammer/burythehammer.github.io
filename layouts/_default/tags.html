@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{ $tags := slice }}
+{{ range .Site.Taxonomies.tags }}
+	{{ $tags = $tags | append .Page.Title }}
+{{ end }}
+{{ $sortedTags := sort $tags }}
+
+{{ range $sortedTags }}
+	<a data-scroll href="#cloud"><h1 id="{{ . }}" class="tag-name">{{ . }}</h1></a>
+	<ul id="post-titles">
+		{{ range ($.Site.Taxonomies.tags.Get .) }}
+			<li>
+				<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+				<span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+			</li>
+		{{ end }}
+	</ul>
+{{ end }}
+
+{{ end }}

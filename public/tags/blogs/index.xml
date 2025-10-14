@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on bury the hammer</title>
+    <link>https://www.burythehammer.com/tags/blogs/</link>
+    <description>Recent content in Blogs on bury the hammer</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Sep 2018 09:30:00 +0000</lastBuildDate>
+    <atom:link href="https://www.burythehammer.com/tags/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testing Programmable Infrastructure: a year on</title>
+      <link>https://www.burythehammer.com/blog/testing-programmable-infrastructure-a-year-on/</link>
+      <pubDate>Thu, 13 Sep 2018 09:30:00 +0000</pubDate>
+      <guid>https://www.burythehammer.com/blog/testing-programmable-infrastructure-a-year-on/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been a year and a half since I started speaking out about testing programmable infrastructure. Lots has changed, but we&amp;rsquo;ve got so much further to go.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve written about my thoughts for InfoQ here: &lt;a href=&#34;https://www.infoq.com/articles/testing-programmable-infrastructure&#34;&gt;Testing Programmable Infrastructure: A year on&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Despite my testing programmable infrastructure talk still being relevant, I originally wrote it quite a long time ago. It makes me wince slightly when I have to give it, because my views have changed somewhat. I&amp;rsquo;ve learned a lot more about test strategy, and I&amp;rsquo;ve learned a lot more about infrastructure too. In fact, I&amp;rsquo;m currently working in a platform engineering team!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

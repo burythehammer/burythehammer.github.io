@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<link rel="icon" href="data:,">
+		<title>
+			{{ .Title }} | bury the hammer
+		</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="{{ .Description }}">
+		<meta name="viewport" content="initial-scale=1">
+
+		<style>
+			div#header li#{{ .Title }} a {
+				color: #ffffff;
+				font-weight: bold;
+			}
+		</style>
+
+		{{ $main := resources.Get "sass/main.sass" }}
+		{{ $style := $main | css.Sass | resources.Minify }}
+		<link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+
+		<!-- Page-specific stylesheets.  -->
+		{{ if .Params.stylesheet }}
+			{{ $pageStyle := resources.Get (printf "sass/%s.sass" .Title) }}
+			{{ if $pageStyle }}
+				{{ $css := $pageStyle | css.Sass | resources.Minify }}
+				<link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
+			{{ end }}
+		{{ end }}
+		{{ if ne .Title "home" }}
+			{{ $headerStyle := resources.Get "sass/header.sass" }}
+			{{ $header := $headerStyle | css.Sass | resources.Minify }}
+			<link rel="stylesheet" type="text/css" href="{{ $header.RelPermalink }}">
+		{{ end }}
+		{{ if .Params.code }}
+			<link rel="stylesheet" type="text/css" href="/css/code_color_scheme.css">
+			{{ $codeStyle := resources.Get "sass/code.sass" }}
+			{{ $code := $codeStyle | css.Sass | resources.Minify }}
+			<link rel="stylesheet" type="text/css" href="{{ $code.RelPermalink }}">
+		{{ end }}
+
+		<!-- MathJax configuration. -->
+		{{ if .Params.math }}
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+			</script>
+			<script>
+				MathJax.Hub.Config({
+					jax: ["input/TeX", "output/HTML-CSS"],
+					"HTML-CSS": {
+						linebreaks: {automatic: true, width: "container"}
+					},
+					tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+				});
+			</script>
+		{{ end }}
+
+		{{ block "head" . }}{{ end }}
+
+		<!-- Bill. -->
+		<script>
+			console.log("_   /|\n\\'o.O'\n=(___)=\n   U\n\nHey there.");
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			{{ if ne .Title "home" }}
+				{{ partial "header.html" . }}
+			{{ end }}
+			{{ block "main" . }}{{ end }}
+		</div>
+
+	</body>
+</html>
