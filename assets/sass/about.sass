@@ -1,62 +1,43 @@
 @import mixins
-
-@include font("social_media")
+@import variables
 
 div#about
-	text-align: center
+	padding-bottom: 60px
 
-	div
-		margin-top: 2%
-		display: inline-block
-		vertical-align: top
+	.intro
+		align-items: center
+		display: flex
+		gap: 26px
+		margin-bottom: 20px
 
-		&#left
-			margin-bottom: 20px
-			margin-right: 40px
-			min-width: 100px
-			width: 20%
-			max-width: 150px
+		@media (max-width: 480px)
+			align-items: flex-start
+			flex-direction: column
 
-			img
-				@include vendor(border-radius, 100px)
+	figure.passport-photo
+		border: 2px dashed rgba($colour-primary, 0.4)
+		flex-shrink: 0
+		padding: 8px
+		transform: rotate(2deg)
 
-				display: block
-				width: 100%
-
-		&#right
-			text-align: left
-			width: 60%
-
-			h1
-				font-size: 1.4em
-
-			p
-				margin-top: 0px
-
-			ul
-				font-size: 1.1em
-
-		div#links
+		img
 			display: block
-			font-family: social_media
-			font-size: 1.4em
-			margin-left: auto
-			margin-right: auto
-			margin-top: 30px
-			text-align: center
-			width: 70%
+			filter: url(#duotone)
+			height: 150px
+			object-fit: cover
+			width: 150px
 
-			div
-				display: inline-block
-				min-width: 30px
-				padding-bottom: 10px
-				width: 30%
+	span.greeting
+		color: $colour-highlight
+		font-weight: 600
 
-				#github:before
-					content: "\e800"
+	p.lede
+		font-family: $font-display
+		font-size: 2.4em
+		font-weight: 700
+		line-height: 1.3em
+		margin: 0
 
-				#linkedin:before
-					content: "\e801"
-
-				#stackoverflow:before
-					content: "\e802"
+	p
+		margin-top: 0
+		margin-bottom: 20px

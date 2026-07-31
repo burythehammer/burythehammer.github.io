@@ -2,16 +2,12 @@
 <div id="speaking">
 	{{ range .Site.Data.speaking }}
 		<div class="speak">
-			<h1>{{ .event }}</h1>
-			<span class="separator">|</span>
-			<span>{{ .location }}</span>
+			<h1>{{ if .url }}<a href="{{ .url }}">{{ .event }}</a>{{ else }}{{ .event }}{{ end }}</h1>
+			<p class="tagline">{{ .location }}</p>
+			<div class="description">{{ .talk | markdownify }}</div>
 			<div class="meta">
 				<span class="time">{{ .date }}</span>
 			</div>
-			<div class="description">{{ .talk | markdownify }}</div>
-				<div class="links">
-					<div class="website"><a href="{{ .url }}">Link</a></div>
-				</div>
 		</div>
 	{{ end }}
 </div>

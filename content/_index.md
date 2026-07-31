@@ -4,35 +4,31 @@ description: About Matt Long.
 stylesheet: true
 ---
 
+<svg width="0" height="0" style="position: absolute">
+	<filter id="duotone" color-interpolation-filters="sRGB">
+		<feColorMatrix type="matrix" values="0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0 0 0 1 0"></feColorMatrix>
+		<feComponentTransfer>
+			<feFuncR type="table" tableValues="0.082 0.929"></feFuncR>
+			<feFuncG type="table" tableValues="0.082 0.918"></feFuncG>
+			<feFuncB type="table" tableValues="0.102 0.886"></feFuncB>
+		</feComponentTransfer>
+	</filter>
+</svg>
+
 <div id="about">
-	<div id="left">
-		<img src="/assets/images/matt.jpeg" alt="Matt Long's photo">
-	</div>
-	<div id="middle"></div>
-	<div id="right">
-		<h1>hello!</h1>
-		<p>
+	<div class="intro">
+		<figure class="passport-photo">
+			<img src="/assets/images/matt.jpeg" alt="Passport-style photo of Matt Long" width="674" height="674">
+		</figure>
+		<p class="lede">
+			<span class="greeting">Hello!</span><br>
 			I'm Matt Long.
 		</p>
-		<p>
-			I am a software engineer and a senior consultant for <a href="https://opencredo.com/">OpenCredo</a>, an open source software consultancy based in London.
-		</p>
-		<p>
-			I worked as a QA engineer for many years, and built test automation frameworks in half a dozen programming languages, including Go, Java, Javascript, and more. After working on many cloud infrastructure projects, I now predominantly work as a platform engineer. Given these dual specialities, I am particularly interested in the intersection of software testing and modern cloud technology.
-		</p>
-		<p>
-			I have presented talks at QCon, TestBash, muCon, Agile Cambridge, and many smaller meetups across London.
-		</p>
-		<p>
-			I am a keen runner, an indiepop fan, and quote The Simpsons too much. I live in Shoreditch with an unbearably cute British shorthair / ragdoll cross.
-		</p>
-		<p>
-			If you're interested in hiring me, or getting me to do a talk, get in touch via <a href="https://www.linkedin.com/in/burythehammer">LinkedIn</a>.
-		</p>
-		<div id="links">
-		<div><a id="github" href="https://github.com/burythehammer" aria-label="GitHub"></a></div>
-		<div><a id="stackoverflow" href="https://stackoverflow.com/users/976718/burythehammer" aria-label="Stack Overflow"></a></div>
-		<div><a id="linkedin" href="https://www.linkedin.com/in/burythehammer" aria-label="LinkedIn"></a></div>
-		</div>
 	</div>
+	<p>
+		I'm a software developer and general dork, currently working as a senior consultant at <a href="https://trifork.com/">Trifork UK</a>. Over 14 years in tech consultancy I've worked as a software developer, a platform engineer, and a software tester. Lately I've been especially drawn to product design and development.
+	</p>
+	<p>
+		I am proudly bisexual, diagnosed with ADHD, and vegetarian. Media has always fascinated me — I love to talk about film, counterculture, the DIY scene, videogames, history, and almost anything else that catches my interest. I'm also a keen runner. I live in London with the cutest cat in the whole world.
+	</p>
 </div>
