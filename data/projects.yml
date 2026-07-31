@@ -1,5 +1,11 @@
+- name: redis cloud terraform provider
+  time: jul 24 - may 26
+  url: https://github.com/RedisLabs/terraform-provider-rediscloud
+  tools: go, terraform, github actions
+  description: Redis Cloud's official Terraform provider, letting teams deploy, update, and manage Redis Cloud databases as code. Sole developer responsible for its ongoing development, across dozens of releases.
+
 - name: global payment provider
-  time: sept 21 - present
+  time: sept 21 - jul 24
   tools: java, iso20022, cucumber, rabbitmq,  performance tests
   description: Test tooling and platform architecture for the next version of an important global payments provider, used by development and test teams to validate it.
 
