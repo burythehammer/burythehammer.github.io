@@ -1,61 +1,61 @@
 - name: global payment provider
   time: sept 21 - present
   tools: java, iso20022, cucumber, rabbitmq,  performance tests
-  description: Wrote test tooling and helped architect the platform for the next version of an important global payments provider, tooling that development and test teams used to validate it.
+  description: Test tooling and platform architecture for the next version of an important global payments provider, used by development and test teams to validate it.
 
 - name: death in videogames
   time: mar 21 - present
   url: https://www.deathinvideogames.com
   tools: jekyll, ruby, sass
-  description: A personal essay project that analysed the relationship between videogames and death, looking at a different game each time — from the consequences of a player's death, to who and why the player kills, to how death was treated narratively and thematically.
+  description: A personal essay project analysing the relationship between videogames and death, looking at a different game each time — from the consequences of a player's death, to who and why the player kills, to how death is treated narratively and thematically.
 
 - name: lego logistics
   time: feb 21 - sept 21
   url: https://www.lego.com
   tools: aws, kubernetes, terraform, java, spring boot, github actions, argocd, helm
-  description: Built a messaging and mapping hub for a major international toy manufacturer's distribution centres, setting up the cloud infrastructure, pipelines, and acceptance test suite from scratch.
+  description: A messaging and mapping hub for LEGO's distribution centres, complete with cloud infrastructure, pipelines, and an acceptance test suite built from scratch.
 
 - name: 10x banking platform
   time: oct 18 - dec 20
   url: https://10xbanking.com
   tools: aws, kubernetes, terraform, golang, concourseci, jenkins, groovy, helm
-  description: Provided platform tooling for a new cloud-native banking platform across several teams — improved and maintained the platform all other teams deployed to, supported them to work effectively on it, and coordinated major releases.
+  description: Platform tooling for a new cloud-native banking platform across several teams — the platform other teams deploy to, kept effective to work on, with major releases coordinated throughout.
 
 - name: experian saas platform
   time: jul 18 - oct 18
   url: https://www.experian.co.uk
   tools: kafka, zookeeper, jenkins, aws, terraform
-  description: Built infrastructure for a household-name credit agency's new SaaS platform, maintaining and extending the shared tooling — Kafka, Jenkins — that every team relied on.
+  description: Infrastructure for a household-name credit agency's SaaS platform, including the shared tooling — Kafka, Jenkins — that every team relies on.
 
 - name: ebay
   time: mar 18 - jul 18
   url: https://www.ebay.co.uk
   tools: java, spring, selenium, exploratory testing
-  description: Worked as a test engineer on a tier-2 application for one of the most popular e-commerce websites in the world — paired with developers, ran risk analysis and exploratory sessions, and rebuilt their custom test automation framework around modern BDD/specification-by-example standards.
+  description: Test engineering on a tier-2 application for one of the most popular e-commerce websites in the world — pairing with developers, running risk analysis and exploratory sessions, and rebuilding their custom test automation framework around modern BDD/specification-by-example standards.
 
 - name: accenture cloud inventory
   time: jul 17 - mar 18
   url: https://www.accenture.com
   tools: javascript, cucumber.js, node.js, mocha & chai, aws lambda, groovy
-  description: Provided quality consulting for a team delivering a cloud infrastructure discovery and tracking service on AWS Lambda, able to track costs and enforce policy across a cloud estate. Built unit, integration, and acceptance tests, and modified their Jenkins pipelines in Groovy.
+  description: Quality consulting for a team delivering a cloud infrastructure discovery and tracking service on AWS Lambda, able to track costs and enforce policy across a cloud estate — including unit, integration, and acceptance tests, plus Jenkins pipelines in Groovy.
 
 - name: hmrc cloud broker
   time: sept 16 - jan 17
   url: https://www.gov.uk/government/organisations/hm-revenue-customs
   tools: java, spring boot, ruby, cucumber, rspec, serverspec
-  description: A cloud broker that let a government department monitor and provision infrastructure across multiple clouds. Maintained and extended its Java/Cucumber/Selenium test suite and its Ruby infrastructure test suite.
+  description: A cloud broker that lets a government department monitor and provision infrastructure across multiple clouds, backed by a Java/Cucumber/Selenium test suite and a Ruby infrastructure test suite.
 
 - name: sedex
   time: jul 15 - mar 16
   url: https://www.sedex.com
   tools: java, cucumber, spring boot, mesos
-  description: Tracked audits on supply chains for large multinational organisations. Maintained and extended the acceptance test suite for this large-scale microservices application, covering both UI and API with Java, Cucumber, and Selenium.
+  description: Tracks audits on supply chains for large multinational organisations, backed by an acceptance test suite for this large-scale microservices application, covering both UI and API with Java, Cucumber, and Selenium.
 
 - name: foosbot
   time: jul 15 - mar 18
   url: https://github.com/burythehammer/foosbot
   tools: python, theano, slack
-  description: A Slack bot that tracked and ranked foosball players.
+  description: A Slack bot that tracks and ranks foosball players.
   github:
     url: burythehammer/foosbot
     branch: master
@@ -64,7 +64,7 @@
   time: nov 15 - present
   url: https://www.burythehammer.com
   tools: hugo, go templates, sass, html
-  description: My personal portfolio and website — look around you! Rebuilt from Jekyll to Hugo, and redesigned from scratch since.
+  description: My personal portfolio and website — look around you! Originally built with Jekyll, now Hugo, redesigned from scratch since.
   github:
     url: burythehammer/burythehammer.github.io
     branch: master
@@ -73,7 +73,7 @@
   time: nov 15
   url: https://github.com/burythehammer/fallout-password-checker
   tools: ruby
-  description: A script that helped you solve the terminal hacking minigame in Fallout 3 and Fallout New Vegas.
+  description: A script that helps solve the terminal hacking minigame in Fallout 3 and Fallout New Vegas.
   github:
     url: burythehammer/fallout-password-checker
     branch: master
@@ -82,7 +82,7 @@
   time: nov 15 - present
   url: https://www.opencredo.com/2015/11/23/ruby-acceptance-testing-framework/
   tools: ruby, cucumber, capybara, selenium
-  description: An open source web testing framework that got you started with UI testing in minutes, using the best tools and practices the industry had to offer — headless testing, parallel test execution, BrowserStack support, and automated documentation generation.
+  description: An open source web testing framework for getting started with UI testing in minutes, using the best tools and practices the industry has to offer — headless testing, parallel test execution, BrowserStack support, and automated documentation generation.
   github:
     url: burythehammer/ruby-acceptance-testing-quickstart
     branch: master
@@ -91,7 +91,7 @@
   time: jan - jul 15
   url: http://hearthwiz.herokuapp.com
   tools: ruby, rails, sass, cucumber, capybara
-  description: A lightweight Rails app that tracked and managed Hearthstone card collections — a personal project deployed on my own website.
+  description: A lightweight Rails app that tracks and manages Hearthstone card collections — a personal project deployed on my own website.
   github:
     url: burythehammer/hearthwiz
     branch: master
@@ -100,16 +100,16 @@
   time: jan 15 - jul 15
   url: https://www.itv.com
   tools: ruby, scala, cucumber, gatling, selenium, ruby
-  description: Ran performance and functional testing for the rebuild of ITV's video-on-demand service.
+  description: Performance and functional testing for the rebuild of ITV's video-on-demand service.
 
 - name: usemango
   time: oct 13 - dec 14
   url: https://www.usemango.co.uk
   tools: vbscript, qtp, alm, .net
-  description: An enterprise test tool and framework built for the HP software ecosystem.
+  description: An enterprise test tool and framework for the HP software ecosystem.
 
 - name: spva
   time: dec 12 - july 13
   url: https://en.wikipedia.org/wiki/Service_Personnel_and_Veterans_Agency
   tools: vbscript, qtp, alm
-  description: Handled automated test creation, maintenance, and execution on an important government project.
+  description: Automated test creation, maintenance, and execution on an important government project.
