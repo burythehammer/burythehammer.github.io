@@ -6,15 +6,19 @@
 div#about
 	padding-bottom: 60px
 
-	&::after
-		clear: both
-		content: ""
-		display: table
+	.intro
+		align-items: center
+		display: flex
+		gap: 26px
+		margin-bottom: 20px
+
+		@media (max-width: 480px)
+			align-items: flex-start
+			flex-direction: column
 
 	figure.passport-photo
 		border: 2px dashed rgba($colour-primary, 0.4)
-		float: left
-		margin: 4px 26px 16px 0
+		flex-shrink: 0
 		padding: 8px
 		transform: rotate(2deg)
 
@@ -25,14 +29,16 @@ div#about
 			object-fit: cover
 			width: 150px
 
-		@media (max-width: 480px)
-			float: none
-			margin: 0 auto 30px
-			width: fit-content
+	span.greeting
+		color: $colour-highlight
+		font-weight: 600
 
 	p.lede
-		font-size: 1.25em
-		line-height: 1.5em
+		font-family: $font-display
+		font-size: 2.4em
+		font-weight: 700
+		line-height: 1.3em
+		margin: 0
 
 	p
 		margin-top: 0
