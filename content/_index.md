@@ -30,9 +30,9 @@ stylesheet: true
 			If you're interested in hiring me, or getting me to do a talk, get in touch via <a href="https://www.linkedin.com/in/burythehammer">LinkedIn</a>.
 		</p>
 		<div id="links">
-		<div><a id="github" href="https://github.com/burythehammer"></a></div>
-		<div><a id="stackoverflow" href="https://stackoverflow.com/users/976718/burythehammer"></a></div>
-		<div><a id="linkedin" href="https://www.linkedin.com/in/burythehammer"></a></div>
+		<div><a id="github" href="https://github.com/burythehammer" aria-label="GitHub"></a></div>
+		<div><a id="stackoverflow" href="https://stackoverflow.com/users/976718/burythehammer" aria-label="Stack Overflow"></a></div>
+		<div><a id="linkedin" href="https://www.linkedin.com/in/burythehammer" aria-label="LinkedIn"></a></div>
 		</div>
 	</div>
 </div>

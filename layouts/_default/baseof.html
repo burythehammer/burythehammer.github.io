@@ -12,7 +12,7 @@
 		<meta name="viewport" content="initial-scale=1">
 
 		<style>
-			div#header li#{{ .Title }} a {
+			div#header li#{{ .Section | default "about" }} a {
 				color: #ffffff;
 				font-weight: bold;
 			}
