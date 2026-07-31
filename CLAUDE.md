@@ -19,7 +19,7 @@ hugo
 hugo --minify
 ```
 
-Hugo v0.151.0+extended required — extended needed for Sass compilation. Exact version pinned in `.github/workflows/hugo.yml`; keep two in sync if bumped.
+Hugo v0.164.0+extended required — extended needed for Sass compilation. Exact version pinned in `.github/workflows/hugo.yml`; keep two in sync if bumped.
 
 No test suite, linter, package manager in repo — validation = `hugo` build w/o error + visual review via `hugo server`.
 
