@@ -3,12 +3,7 @@
 	{{ range .Site.Data.projects }}
 		<div class="project">
 			<h1>{{ .name }}</h1>
-			<span class="separator">|</span>
-			<span>{{ .tagline }}</span>
-			<div class="meta">
-				<span class="time">{{ .time }}</span>
-				<span class="toolstack">| toolstack:</span> {{ .tools }}
-			</div>
+			<p class="tagline">{{ .tagline }}</p>
 			<div class="description">{{ .description | markdownify }}</div>
 			{{ if or .url .github }}
 				<div class="links"
@@ -34,6 +29,10 @@
 					{{ end }}
 				</div>
 			{{ end }}
+			<div class="meta">
+				<span class="time">{{ .time }}</span>
+				<span class="toolstack">{{ .tools }}</span>
+			</div>
 		</div>
 	{{ end }}
 </div>
