@@ -15,44 +15,42 @@ ul#posts
 			margin-top: 0
 			padding-top: 0
 
-		>div.meta
-			display: block
+		>a.blog-title
+			color: $colour-primary
+			display: inline-block
+			font-family: $font-display
+			font-size: 1.6em
+			font-weight: 700
+			letter-spacing: -0.01em
+			text-transform: uppercase
 
-			div.text
-				>a.blog-title
-					color: $colour-primary
-					font-family: $font-display
-					font-size: 1.6em
-					font-weight: 700
-					letter-spacing: -0.01em
-					text-transform: uppercase
+			&:hover
+				color: $colour-highlight
 
-					&:hover
-						color: $colour-highlight
-
-				>span.date
-					color: $colour-secondary
-					font-family: $font-mono
-					font-size: 0.78em
-					letter-spacing: 0.06em
-					text-transform: uppercase
-
-				div.tags
-					color: $colour-secondary
-					font-family: $font-mono
-					font-size: 0.75em
-					letter-spacing: 0.04em
-					margin-top: 6px
-					text-transform: uppercase
-
-					span
-						color: $colour-secondary
-
-			div.summary
-				color: $colour-secondary
-				font-style: italic
-				margin-top: 8px
+		>div.summary
+			color: $colour-secondary
+			font-style: italic
+			margin-top: 8px
 
 		>div.excerpt
 			font-size: 1.0em
 			margin-top: 12px
+
+		>div.meta
+			align-items: baseline
+			color: $colour-secondary
+			display: flex
+			flex-wrap: wrap
+			font-family: $font-mono
+			font-size: 0.75em
+			gap: 4px 14px
+			letter-spacing: 0.04em
+			margin-top: 18px
+			text-transform: uppercase
+
+			div.tags
+				a
+					color: $colour-secondary
+
+					&:hover
+						color: $colour-highlight
