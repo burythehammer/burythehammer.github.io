@@ -9,17 +9,17 @@
   tools: jekyll, ruby, sass
   description: A personal essay project that analysed the relationship between videogames and death, looking at a different game each time — from the consequences of a player's death, to who and why the player kills, to how death was treated narratively and thematically.
 
-- name: toy manufacturer logistics
+- name: lego logistics
   time: feb 21 - sept 21
   tools: aws, kubernetes, terraform, java, spring boot, github actions, argocd, helm
   description: Built a messaging and mapping hub for a major international toy manufacturer's distribution centres, setting up the cloud infrastructure, pipelines, and acceptance test suite from scratch.
 
-- name: cloud native banking platform (various)
+- name: 10x banking platform
   time: oct 18 - dec 20
   tools: aws, kubernetes, terraform, golang, concourseci, jenkins, groovy, helm
   description: Provided platform tooling for a new cloud-native banking platform across several teams — improved and maintained the platform all other teams deployed to, supported them to work effectively on it, and coordinated major releases.
 
-- name: credit agency saas platform
+- name: experian saas platform
   time: jul 18 - oct 18
   tools: kafka, zookeeper, jenkins, aws, terraform
   description: Built infrastructure for a household-name credit agency's new SaaS platform, maintaining and extending the shared tooling — Kafka, Jenkins — that every team relied on.
@@ -29,17 +29,17 @@
   tools: java, spring, selenium, exploratory testing
   description: Worked as a test engineer on a tier-2 application for one of the most popular e-commerce websites in the world — paired with developers, ran risk analysis and exploratory sessions, and rebuilt their custom test automation framework around modern BDD/specification-by-example standards.
 
-- name: major consultancy cloud inventory
+- name: accenture cloud inventory
   time: jul 17 - mar 18
   tools: javascript, cucumber.js, node.js, mocha & chai, aws lambda, groovy
   description: Provided quality consulting for a team delivering a cloud infrastructure discovery and tracking service on AWS Lambda, able to track costs and enforce policy across a cloud estate. Built unit, integration, and acceptance tests, and modified their Jenkins pipelines in Groovy.
 
-- name: government cloud broker
+- name: hmrc cloud broker
   time: sept 16 - jan 17
   tools: java, spring boot, ruby, cucumber, rspec, serverspec
   description: A cloud broker that let a government department monitor and provision infrastructure across multiple clouds. Maintained and extended its Java/Cucumber/Selenium test suite and its Ruby infrastructure test suite.
 
-- name: ethical supply chain tracker
+- name: sedex
   time: jul 15 - mar 16
   tools: java, cucumber, spring boot, mesos
   description: Tracked audits on supply chains for large multinational organisations. Maintained and extended the acceptance test suite for this large-scale microservices application, covering both UI and API with Java, Cucumber, and Selenium.
