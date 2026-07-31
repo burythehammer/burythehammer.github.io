@@ -1,8 +1,6 @@
 @import mixins
 @import variables
 
-@include font("projects")
-
 div#projects
 	padding-bottom: 50px
 
@@ -20,10 +18,14 @@ div.project
 		font-size: 1.9em
 
 		>a
-			font-size: 0.5em
-			font-weight: normal
-			padding-left: 10px
-			text-transform: none
+			color: inherit
+			font: inherit
+			letter-spacing: inherit
+			text-transform: inherit
+
+			&:hover
+				color: $colour-highlight
+				text-decoration: none
 
 	>span.time
 		color: $colour-secondary
@@ -50,23 +52,6 @@ div.project
 			font-size: 0.7em
 			vertical-align: super
 			line-height: 0
-
-	>div.links
-		font-family: projects
-		margin-top: 20px
-
-		div
-			font-size: 0.95em
-
-			&.website:before
-				content: "\e802"
-
-			&.github:before
-				content: "\e801"
-
-			a
-				font-family: "Source Sans Pro"
-				padding-left: 5px
 
 	>div.meta
 		align-items: baseline

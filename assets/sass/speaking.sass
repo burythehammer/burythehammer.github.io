@@ -1,8 +1,6 @@
 @import mixins
 @import variables
 
-@include font("projects")
-
 div#speaking
 	padding-bottom: 50px
 
@@ -19,6 +17,16 @@ div.speak
 	>h1
 		font-size: 1.9em
 
+		>a
+			color: inherit
+			font: inherit
+			letter-spacing: inherit
+			text-transform: inherit
+
+			&:hover
+				color: $colour-highlight
+				text-decoration: none
+
 	>p.tagline
 		color: $colour-secondary
 		font-family: $font-body
@@ -27,25 +35,6 @@ div.speak
 
 	>div.description
 		margin-top: 16px
-
-	>div.links
-		font-family: projects
-		margin-top: 20px
-		text-align: center
-		width: 100%
-
-		div
-			display: inline-block
-			font-size: 0.95em
-			min-width: 150px
-			text-align: center
-
-			&.website:before
-				content: "\e802"
-
-			a
-				font-family: "Source Sans Pro"
-				padding-left: 5px
 
 	>div.meta
 		align-items: baseline
