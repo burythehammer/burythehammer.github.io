@@ -25,11 +25,14 @@ div.project
 			padding-left: 10px
 			text-transform: none
 
-	>p.tagline
+	>span.time
 		color: $colour-secondary
-		font-family: $font-body
-		font-size: 1.05em
-		margin-top: 4px
+		display: block
+		font-family: $font-mono
+		font-size: 0.78em
+		letter-spacing: 0.05em
+		margin-top: 6px
+		text-transform: uppercase
 
 	>div.description
 		margin-top: 16px
@@ -51,29 +54,12 @@ div.project
 	>div.links
 		font-family: projects
 		margin-top: 20px
-		text-align: center
-		width: 100%
-
-		&#links_1 > div
-			width: 100%
-
-		&#links_2 > div
-			width: 50%
-
-		&#links_3 > div
-			width: 33.33%
 
 		div
-			display: inline-block
 			font-size: 0.95em
-			min-width: 150px
-			text-align: center
 
 			&.website:before
 				content: "\e802"
-
-			&.download:before
-				content: "\e800"
 
 			&.github:before
 				content: "\e801"

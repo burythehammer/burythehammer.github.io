@@ -6,25 +6,14 @@
 			<span class="time">{{ .time }}</span>
 			<div class="description">{{ .description | markdownify }}</div>
 			{{ if or .url .github }}
-				<div class="links"
-					{{ if and .url .github }}
-						id="links_3"
-					{{ else if .github }}
-						id="links_2"
-					{{ else }}
-						id="links_1"
-					{{ end }}>
-					{{ if .url }}
-						<div class="website">
-							<a href="{{ .url }}">view online</a>
-						</div>
-					{{ end }}
+				<div class="links">
 					{{ if .github }}
 						<div class="github">
 							<a href="https://github.com/{{ .github.url }}">view on GitHub</a>
 						</div>
-						<div class="download">
-							<a href="https://github.com/{{ .github.url }}/archive/{{ .github.branch }}.zip">download zip</a>
+					{{ else if .url }}
+						<div class="website">
+							<a href="{{ .url }}">view online</a>
 						</div>
 					{{ end }}
 				</div>
