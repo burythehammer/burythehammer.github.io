@@ -61,10 +61,10 @@
     branch: master
 
 - name: this website
-  time: nov 15 - dec 15
+  time: nov 15 - present
   url: https://www.burythehammer.com
-  tools: ruby, jekyll, sass, html
-  description: My personal portfolio and website — look around you! Graciously modified from http://sevko.io.
+  tools: hugo, go templates, sass, html
+  description: My personal portfolio and website — look around you! Rebuilt from Jekyll to Hugo, and redesigned from scratch since.
   github:
     url: burythehammer/burythehammer.github.io
     branch: master
