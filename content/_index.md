@@ -18,7 +18,6 @@ stylesheet: true
 <div id="about">
 	<figure class="passport-photo">
 		<img src="/assets/images/matt.jpeg" alt="Passport-style photo of Matt Long" width="674" height="674">
-		<figcaption>35&nbsp;&times;&nbsp;45</figcaption>
 	</figure>
 	<p class="lede">
 		I'm Matt Long — a software engineer and senior consultant for <a href="https://opencredo.com/">OpenCredo</a>, an open source software consultancy based in London.
