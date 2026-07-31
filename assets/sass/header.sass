@@ -1,7 +1,4 @@
-@import mixins
 @import variables
-
-@include font("social_media")
 
 div#header
 	border-bottom: 2px dashed rgba($colour-primary, 0.25)
@@ -22,25 +19,20 @@ div#header
 	.social
 		display: flex
 		flex-shrink: 0
-		font-family: social_media
-		font-size: 1.2em
 		gap: 14px
 
 		a
 			color: $colour-secondary
+			display: block
 
 			&:hover
 				color: $colour-highlight
 				text-decoration: none
 
-		#github:before
-			content: "\e800"
-
-		#linkedin:before
-			content: "\e801"
-
-		#stackoverflow:before
-			content: "\e802"
+			svg
+				display: block
+				height: 20px
+				width: 20px
 
 	nav ul
 		display: flex
