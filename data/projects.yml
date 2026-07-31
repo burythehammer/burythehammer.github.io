@@ -10,10 +10,12 @@
   description: A performance testing framework for the next release of an important global payments provider's platform.
 
 - name: death in videogames
-  time: mar 21 - present
-  url: https://www.deathinvideogames.com
+  time: mar 21 - apr 21
   tools: jekyll, ruby, sass
   description: A personal essay project analysing the relationship between videogames and death, looking at a different game each time — from the consequences of a player's death, to who and why the player kills, to how death is treated narratively and thematically.
+  github:
+    url: burythehammer/death-in-videogames
+    branch: main
 
 - name: lego logistics
   time: feb 21 - sept 21
