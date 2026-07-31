@@ -45,16 +45,17 @@
 
 		<!-- MathJax configuration. -->
 		{{ if .Params.math }}
-			<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-			</script>
 			<script>
-				MathJax.Hub.Config({
-					jax: ["input/TeX", "output/HTML-CSS"],
-					"HTML-CSS": {
-						linebreaks: {automatic: true, width: "container"}
+				window.MathJax = {
+					tex: {
+						inlineMath: [['$', '$'], ['\\(', '\\)']]
 					},
-					tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-				});
+					chtml: {
+						linebreaks: {automatic: true, width: "container"}
+					}
+				};
+			</script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 			</script>
 		{{ end }}
 

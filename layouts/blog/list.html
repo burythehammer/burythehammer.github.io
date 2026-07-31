@@ -1,5 +1,5 @@
 {{ define "main" }}
-<a href="/blog/feed.xml">[RSS]</a>
+{{ with .OutputFormats.Get "rss" }}<a href="{{ .Permalink }}">[RSS]</a>{{ end }}
 
 <ul id="posts">
 	{{ range .Site.RegularPages.ByDate.Reverse }}
