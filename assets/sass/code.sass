@@ -1,4 +1,5 @@
 @import mixins
+@import variables
 
 pre
 	overflow: auto
@@ -9,12 +10,14 @@ pre
 div.highlight
 	@include vendor(border-radius, 4px)
 
-	background-color: #f0eeee
-	border: 1px solid #bbb
-	font-size: 0.95em
-	line-height: 1em
+	background-color: rgba($colour-primary, 0.06)
+	border: 1px solid rgba($colour-primary, 0.2)
+	font-family: $font-mono
+	font-size: 0.9em
+	line-height: 1.4em
 	margin-bottom: 20px
 
 code.inline
-	background-color: #e5e5e5
+	background-color: rgba($colour-primary, 0.1)
+	font-family: $font-mono
 	padding: 2px 4px

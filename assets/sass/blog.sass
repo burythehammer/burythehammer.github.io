@@ -6,54 +6,45 @@ ul#posts
 	padding-bottom: 10px
 
 	li.post
-		margin-bottom: 50px
-		padding-top: 10px
+		border-top: 2px dashed rgba($colour-primary, 0.25)
+		margin-top: 40px
+		padding-top: 40px
+
+		&:first-child
+			border-top: 0
+			margin-top: 0
+			padding-top: 0
 
 		>div.meta
-			display: inline-block
-			line-height: 1.8em
-			width: 100%
-
-			div
-				display: inline-block
-				margin-right: 3%
-
-				&.thumbnail
-					$imageSize: 70px
-
-					height: $imageSize
-					min-width: $imageSize
-					width: 10%
-
-					img
-						height: $imageSize
-						width: 100%
-
-			@media (max-width: 560px)
-				div.thumbnail
-					display: none
+			display: block
 
 			div.text
-				vertical-align: top
-				width: 100%
+				>a.blog-title
+					font-size: 1.6em
 
-				>a
-					font-size: 1.8em
-					font-family: $roboto-slab
+				>span.date
+					color: $colour-accent
+					font-family: $font-mono
+					font-size: 0.78em
+					letter-spacing: 0.06em
+					text-transform: uppercase
 
-				>span
-					color: $white
-					float: right
+				div.tags
+					color: $colour-secondary
+					font-family: $font-mono
+					font-size: 0.75em
+					letter-spacing: 0.04em
+					margin-top: 6px
+					text-transform: uppercase
 
-				>div
-					display: block
-
-					div.tags
-						color: $colour-primary
-						font-size: 0.5em
+					span
+						color: $colour-secondary
 
 			div.summary
-				color: $colour-highlight
+				color: $colour-secondary
+				font-style: italic
+				margin-top: 8px
 
 		>div.excerpt
 			font-size: 1.0em
+			margin-top: 12px

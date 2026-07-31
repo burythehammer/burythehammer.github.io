@@ -7,73 +7,50 @@ div#speaking
 	padding-bottom: 50px
 
 div.speak
-	margin: 50px 0
+	border-top: 2px dashed rgba($colour-primary, 0.25)
+	margin-top: 40px
+	padding-top: 40px
 
-	>div.text, >img
-		display: inline-block
-		vertical-align: top
+	&:first-child
+		border-top: 0
+		margin-top: 0
+		padding-top: 0
 
 	>h1
-		display: inline-block
+		display: inline
 		font-size: 1.5em
-		margin-bottom: 4px
-		vertical-align: middle
-
-		>a
-			padding-left: 10px
-			font-size: 0.8em
-			font-weight: normal
-
-	>span, >div.meta > span
-		color: $colour-highlight
-		font-size: 1.1em
-		margin-bottom: 4px
 
 	>span.separator
-		color: $colour-primary
-		margin: 0 5px
+		color: $colour-secondary
+		margin: 0 8px
+
+	>span:not(.separator)
+		color: $colour-accent
+		font-family: $font-mono
+		font-size: 0.85em
+		letter-spacing: 0.03em
+		text-transform: uppercase
 
 	>div.meta
-		color: $colour-highlight
-		font-size: 0.9em
+		color: $colour-accent
+		font-family: $font-mono
+		font-size: 0.82em
+		letter-spacing: 0.03em
 		margin-bottom: 3px
+		margin-top: 6px
+		text-transform: uppercase
 
 		span.time
-			font-weight: bold
-			letter-spacing: 0.05em
-
-		span.toolstack
-			color: $colour-primary
+			font-weight: 500
 
 	>div.description
-		p
-			margin-top: 0px
-
-		ul
-			list-style: disc inside
-			margin-left: 24px
-			padding-left: 2em
-			text-indent: -2em
-
-		sup
-			font-size: 0.7em
-			vertical-align: super
-			line-height: 0
+		margin-top: 16px
 
 	>div.links
 		font-family: projects
-		margin-top: 14px
+		margin-top: 20px
 		text-align: center
 		width: 100%
-
-		&#links_1 > div
-			width: 100%
-
-		&#links_2 > div
-			width: 50%
-
-		&#links_3 > div
-			width: 33.33%
 
 		div
 			display: inline-block
@@ -83,12 +60,6 @@ div.speak
 
 			&.website:before
 				content: "\e802"
-
-			&.download:before
-				content: "\e800"
-
-			&.github:before
-				content: "\e801"
 
 			a
 				font-family: "Source Sans Pro"

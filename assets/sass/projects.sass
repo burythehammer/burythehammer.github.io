@@ -7,45 +7,54 @@ div#projects
 	padding-bottom: 50px
 
 div.project
-	margin: 50px 0
+	border-top: 2px dashed rgba($colour-primary, 0.25)
+	margin-top: 40px
+	padding-top: 40px
 
-	>div.text, >img
-		display: inline-block
-		vertical-align: top
+	&:first-child
+		border-top: 0
+		margin-top: 0
+		padding-top: 0
 
 	>h1
-		display: inline-block
+		display: inline
 		font-size: 1.5em
-		margin-bottom: 4px
-		vertical-align: middle
 
 		>a
-			padding-left: 10px
-			font-size: 0.8em
+			font-size: 0.6em
 			font-weight: normal
-
-	>span, >div.meta > span
-		color: $colour-highlight
-		font-size: 1.1em
-		margin-bottom: 4px
+			padding-left: 10px
+			text-transform: none
 
 	>span.separator
-		color: $colour-primary
-		margin: 0 5px
+		color: $colour-secondary
+		margin: 0 8px
+
+	>span:not(.separator)
+		color: $colour-accent
+		font-family: $font-mono
+		font-size: 0.85em
+		letter-spacing: 0.03em
+		text-transform: uppercase
 
 	>div.meta
-		color: $colour-highlight
-		font-size: 0.9em
+		color: $colour-accent
+		font-family: $font-mono
+		font-size: 0.82em
+		letter-spacing: 0.03em
 		margin-bottom: 3px
+		margin-top: 6px
+		text-transform: uppercase
 
 		span.time
-			font-weight: bold
-			letter-spacing: 0.05em
+			font-weight: 500
 
 		span.toolstack
-			color: $colour-primary
+			color: $colour-secondary
 
 	>div.description
+		margin-top: 16px
+
 		p
 			margin-top: 0px
 
@@ -62,7 +71,7 @@ div.project
 
 	>div.links
 		font-family: projects
-		margin-top: 14px
+		margin-top: 20px
 		text-align: center
 		width: 100%
 

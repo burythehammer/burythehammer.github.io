@@ -1,20 +1,27 @@
-@use "sass:math"
 @import variables
 
-$numMenuItems: 6
-
 div#header
-    border-bottom: 1px solid $colour-primary
-    margin-bottom: 30px
-    padding-top: 30px
-    padding-bottom: 20px
-    text-align: center
+	border-bottom: 2px dashed rgba($colour-primary, 0.25)
+	margin-bottom: 40px
+	padding-bottom: 22px
+	padding-top: 34px
 
-    #maintitle
-        margin-bottom: 20px
+	.wordmark
+		font-size: clamp(1.5rem, 5vw, 2.1rem)
+		margin-bottom: 18px
 
-    ul > li
-        display: inline-block
-        text-align: center
-        min-width: 60px
-        width: calc(80% / #{$numMenuItems})
+	nav ul
+		display: flex
+		flex-wrap: wrap
+		gap: 6px 20px
+
+		li a
+			color: $colour-secondary
+			font-family: $font-mono
+			font-size: 0.82em
+			letter-spacing: 0.05em
+			text-transform: uppercase
+
+			&:hover
+				color: $colour-primary
+				text-decoration: none

@@ -9,14 +9,14 @@ html, body
 	color: $colour-primary
 
 div#main
-	font-family: $open-sans
-	font-size: 1em
-	line-height: 1.34em
-	height: 100%
+	font-family: $font-body
+	font-size: 1.05em
+	line-height: 1.6em
 	margin-left: auto
 	margin-right: auto
 	max-width: $width
-	padding: 0 18px
+	min-height: 100%
+	padding: 0 20px
 
 a
 	@extend .t3
@@ -25,7 +25,20 @@ a
 	text-decoration: none
 
 	&:hover
-		color: $white
+		color: $colour-primary
+		text-decoration: underline
+		text-decoration-style: dashed
+		text-decoration-thickness: 1px
+		text-underline-offset: 3px
+
+	&:focus-visible
+		outline: 2px solid $colour-accent
+		outline-offset: 3px
+
+button, input, [tabindex]
+	&:focus-visible
+		outline: 2px solid $colour-accent
+		outline-offset: 3px
 
 ul
 	list-style: none
@@ -34,7 +47,47 @@ ul
 
 h1, h2, h3, h4, h5, h6
 	color: $colour-primary
-	font-family: $roboto-slab
-	line-height: 1.1em
+	font-family: $font-display
+	font-weight: 700
+	letter-spacing: -0.01em
+	line-height: 1em
 	margin: 0
-	margin-bottom: 10px
+	margin-bottom: 12px
+	text-transform: uppercase
+
+// small tracked-out mono labels — dates, tags, tool stacks
+.eyebrow
+	color: $colour-accent
+	font-family: $font-mono
+	font-size: 0.78em
+	letter-spacing: 0.06em
+	text-transform: uppercase
+
+// the site's recurring mark — condensed poster type, stamped at a slight angle
+.wordmark
+	color: $colour-primary
+	display: inline-block
+	font-family: $font-display
+	font-weight: 900
+	letter-spacing: 0.01em
+	line-height: 0.9em
+	text-decoration: none !important
+	text-transform: uppercase
+	transform: rotate(-1.5deg)
+
+	&:hover
+		color: $colour-primary
+
+	span
+		border-bottom: 3px solid $colour-highlight
+		padding-bottom: 0.05em
+
+// perforated / ticket-stub style divider
+.tear
+	border: 0
+	border-top: 2px dashed rgba($colour-primary, 0.25)
+	margin: 30px 0
+
+@media (prefers-reduced-motion: reduce)
+	*
+		transition-duration: 0.01ms !important
