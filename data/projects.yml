@@ -29,6 +29,7 @@
 
 - name: ebay
   time: mar 18 - jul 18
+  url: https://www.ebay.co.uk
   tools: java, spring, selenium, exploratory testing
   description: Worked as a test engineer on a tier-2 application for one of the most popular e-commerce websites in the world — paired with developers, ran risk analysis and exploratory sessions, and rebuilt their custom test automation framework around modern BDD/specification-by-example standards.
 
