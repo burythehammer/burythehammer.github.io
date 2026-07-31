@@ -1,14 +1,13 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Guidance for Claude Code (claude.ai/code) working w/ code in this repo.
 
 ## Project Overview
 
-This is a personal website and blog powered by Hugo, hosted on GitHub Pages at burythehammer.com. The site features blog posts, projects portfolio, speaking engagements, and CV.
+Personal website + blog, Hugo-powered, hosted GitHub Pages at burythehammer.com. Site has blog posts, projects portfolio, speaking engagements, CV.
 
 ## Build and Development Commands
 
-### Local Development
 ```bash
 # Build and serve locally (with live reload)
 hugo server
@@ -20,75 +19,41 @@ hugo
 hugo --minify
 ```
 
-### Hugo Version
-This project uses Hugo v0.151.0+extended. The extended version is required for Sass/SCSS compilation.
+Hugo v0.151.0+extended required — extended needed for Sass compilation. Exact version pinned in `.github/workflows/hugo.yml`; keep two in sync if bumped.
+
+No test suite, linter, package manager in repo — validation = `hugo` build w/o error + visual review via `hugo server`.
 
 ## Architecture
 
-### Hugo Structure
+### Templates and rendering (`layouts/`)
 
-- **hugo.toml**: Main Hugo configuration file with:
-  - Base URL: https://www.burythehammer.com
-  - Permalink format: `/blog/:title` (matches previous Jekyll setup)
-  - Markdown renderer: Goldmark with unsafe HTML enabled
-  - Table of contents: H1-H2 headers
-  - Taxonomies: tags enabled
+- `_default/baseof.html` = single base template all pages render through. Conditionally includes: page header (skipped on homepage, where `.Title` is `"home"`), page-specific stylesheet (loaded from `sass/<page-title>.sass` when front matter sets `stylesheet: true`), MathJax (when front matter sets `math: true`).
+- Content-type templates (`blog/single.html`, `blog/list.html`, `projects/list.html`, `speaking/list.html`, `_default/tags.html`, `index.html`) plug into base via Hugo's `main`/`head` blocks.
+- `layouts/partials/header.html` = hardcoded nav — links to about/projects/speaking/blog/cv/contact live here, not config or data.
 
-- **layouts/**:
-  - `_default/baseof.html`: Base template with conditional header, page-specific stylesheets, MathJax support
-  - `blog/single.html`: Blog post template with metadata, tags, and TOC support
-  - `blog/list.html`: Blog index listing all posts
-  - `index.html`: Homepage template
-  - `404.html`: Custom 404 error page
-  - `_default/tags.html`: Tags taxonomy page
-  - `projects/list.html`: Projects portfolio page
-  - `speaking/list.html`: Speaking engagements page
+### Content and data
 
-- **layouts/partials/**:
-  - `header.html`: Site navigation header
-  - `post_summary.html`: Blog post summary for listings
-
-- **content/**:
-  - `blog/`: Blog posts in Markdown format, named `YYYY-MM-DD-title.md`
-  - `_index.md`: Homepage content
-  - `projects/_index.md`: Projects section index
-  - `speaking/_index.md`: Speaking section index
-
-- **data/**: YAML data files
-  - `projects.yml`: Portfolio projects with descriptions, tools, time ranges
-  - `speaking.yml`: Speaking engagement information
-
-### Hugo Features Replacing Jekyll Plugins
-
-Hugo's built-in features replace all previous Jekyll custom plugins:
-
-1. **Excerpt generation**: Hugo's `.Summary` replaces custom excerpt.rb plugin
-2. **Table of Contents**: Hugo's `.TableOfContents` replaces tocGenerator.rb plugin
-3. **Static resource URLs**: Hugo's resource pipeline and shortcodes replace static.rb plugin
+- `content/blog/*.md`: posts named `YYYY-MM-DD-title.md`, permalinked as `/blog/:title` per `hugo.toml`. Front matter drives per-page behavior: `tags` (string or array — templates handle both), `toc: true`, `stylesheet: true`, `math: true`.
+- `data/projects.yml`, `data/speaking.yml`: structured YAML consumed directly by respective list templates — add/edit entries here, not as content pages.
 
 ### Styling
 
-- **Sass/SCSS**: Hugo processes Sass files from `/assets/sass/`
-- **Variables**: `assets/sass/_variables.sass` contains theme colors and shared styling
-- **Mixins**: `assets/sass/_mixins.sass` contains reusable style patterns
-- **Processing**: Uses Hugo's `css.Sass` filter with minification
-- **Fonts**: Custom icon fonts for projects and social media in `/static/fonts/`
+- Sass lives in `assets/sass/`, compiled via Hugo's `css.Sass` pipeline + `resources.Minify`, invoked inline in `baseof.html` (no separate build step).
+- `main.sass` always loaded; `header.sass` loads on every non-home page; other files (`code.sass`, per-page stylesheets matching page's `.Title`) load conditionally per logic in `baseof.html` above.
+- Note: `assets/sass/_sass/_mixins.sass` and `assets/sass/_sass/_variables.sass` = byte-identical dupes of `assets/sass/_mixins.sass` and `assets/sass/_variables.sass`, leftover from Jekyll→Hugo rebuild. Nothing references `_sass/` copies — edit top-level files, treat `_sass/` as dead weight if cleaning up.
 
 ### Deployment
 
-- **Method**: GitHub Actions (modern approach)
-- **Workflow**: `.github/workflows/hugo.yml` handles build and deployment
-- **Hugo version**: v0.151.0+extended (specified in workflow)
-- **Custom domain**: Configured via CNAME file in /static/
-- **Build output**: `public/` directory (generated, not committed)
+- `.github/workflows/hugo.yml` builds w/ `hugo --minify`, deploys to GitHub Pages on every push to `main` — no separate staging step or PR preview.
+- `public/` = build output (gitignored), `resources/` = Hugo's resource cache — never edit either directly.
+- Custom domain set via `static/CNAME`.
 
-The site automatically deploys when changes are pushed to the `main` branch. Hugo builds complete in ~10-20ms compared to Jekyll's ~500ms builds (25-50x faster).
+## Agent skills
 
-## Important Notes
+### Issue tracker
 
-- The `public/` directory is the build output and should not be edited directly (equivalent to Jekyll's `_site/`)
-- Blog posts require front matter with title, date, tags, and optionally `toc: true`
-- Hugo's built-in features eliminate need for custom plugins
-- Tags can be single strings or arrays - templates handle both cases
-- Page-specific stylesheets are automatically loaded based on page title when `stylesheet: true` is set in front matter
-- Old Jekyll files (_posts/, _layouts/, _includes/, _plugins/, Gemfile) are retained during migration but not used by Hugo
+Issues tracked as GitHub Issues on this repo (`burythehammer/burythehammer.github.io`), via the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Domain docs
+
+Single-context layout — `CONTEXT.md` + `docs/adr/` at the repo root. See `docs/agents/domain.md`.
