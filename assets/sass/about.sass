@@ -1,8 +1,6 @@
 @import mixins
 @import variables
 
-@include font("social_media")
-
 div#about
 	padding-bottom: 60px
 
@@ -43,22 +41,3 @@ div#about
 	p
 		margin-top: 0
 		margin-bottom: 20px
-
-	div#links
-		border-top: 2px dashed rgba($colour-primary, 0.25)
-		display: flex
-		font-family: social_media
-		font-size: 1.6em
-		gap: 30px
-		margin-top: 40px
-		padding-top: 30px
-
-		div
-			#github:before
-				content: "\e800"
-
-			#linkedin:before
-				content: "\e801"
-
-			#stackoverflow:before
-				content: "\e802"
