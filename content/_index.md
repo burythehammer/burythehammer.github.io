@@ -4,7 +4,22 @@ description: About Matt Long.
 stylesheet: true
 ---
 
+<svg width="0" height="0" style="position: absolute">
+	<filter id="duotone" color-interpolation-filters="sRGB">
+		<feColorMatrix type="matrix" values="0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0 0 0 1 0"></feColorMatrix>
+		<feComponentTransfer>
+			<feFuncR type="table" tableValues="0.082 0.929"></feFuncR>
+			<feFuncG type="table" tableValues="0.082 0.918"></feFuncG>
+			<feFuncB type="table" tableValues="0.102 0.886"></feFuncB>
+		</feComponentTransfer>
+	</filter>
+</svg>
+
 <div id="about">
+	<figure class="passport-photo">
+		<img src="/assets/images/matt.jpeg" alt="Passport-style photo of Matt Long" width="674" height="674">
+		<figcaption>35&nbsp;&times;&nbsp;45</figcaption>
+	</figure>
 	<p class="lede">
 		I'm Matt Long — a software engineer and senior consultant for <a href="https://opencredo.com/">OpenCredo</a>, an open source software consultancy based in London.
 	</p>
